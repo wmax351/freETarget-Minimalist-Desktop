@@ -1,31 +1,67 @@
 {
   "app": "freETarget Minimalist",
-  "version": "0.3.11-beta.1",
+  "version": "0.3.12-beta.1",
   "platform": "windows",
   "files": {
     "BASELINE_v1.7.9_README.txt": {
       "sha256": "b7918c145f97fe226817a3ae8e18e992249d7c9f033f1178f47478d6fb91fe57",
       "size": 32043
     },
+    "BUILD_AND_INSTALL_BOTH.bat": {
+      "sha256": "8e0333180b287edcadfe727992ec03437be8338aeda8a6ba37e85883299352f7",
+      "size": 112
+    },
+    "BUILD_AND_INSTALL_X64.bat": {
+      "sha256": "e7d603e87a8b8b24d79a555f8bc4334fe7c34126abb84ba3907cc8624daa00d0",
+      "size": 107
+    },
+    "BUILD_AND_INSTALL_X86.bat": {
+      "sha256": "bb13168b48d09298831a3031587d48d1660d48e70f2fff6fac5019d7035c63fe",
+      "size": 154
+    },
     "BUILD_INSTALLER.bat": {
-      "sha256": "e06ce7fd0d8b5bda6c8fc7e434d1e134c0de412889b818500d20c34fc88fa41d",
-      "size": 76
+      "sha256": "0eb40b3cda450549f4c21ea87a77a02884a5dce2e8f075902ed5fc0d959d42c7",
+      "size": 73
     },
     "BUILD_WINDOWS.bat": {
-      "sha256": "1e1677831b23cc36e618e784f2494b9700c9d0d1e355a92578b0fae78cd10c1d",
-      "size": 72
+      "sha256": "993574cbd34bf889e170ca3ef2ea05dcf66623a6b609cfa8522b511850832234",
+      "size": 69
+    },
+    "BUILD_WINDOWS_X64.bat": {
+      "sha256": "2b4ac0ded8a05036995efcaa55698969fc1177b74aa2630c66446320ee0da18e",
+      "size": 137
     },
     "BUILD_WINDOWS_X86.bat": {
-      "sha256": "b1e66fc0f0da738d9c618fadca4280aeaff268bc25c1f2c383ade39dcc784cdf",
-      "size": 96
+      "sha256": "e23c9eb90c8eef1d11f50c3f8cf01f8d52dea32a8440e6165cdd1d4d0254cbe5",
+      "size": 92
     },
     "BUILD_WINDOWS_X86.md": {
-      "sha256": "e6a6d15355bfc1be17c8b8b6b2cdbc962185974cc1c4b9a5f819420ca1f60d97",
+      "sha256": "ad5f0bca47604408e356b158b3cad21ebd6a9d2214bffbc703e7e422e1a318d5",
       "size": 1702
+    },
+    "CREATE_INSTALLER_X64.bat": {
+      "sha256": "b0f639dddd22b5c1e8ab6c78a2b960cd37406608fb70731dd35d15875b990a17",
+      "size": 694
+    },
+    "CREATE_INSTALLER_X86.bat": {
+      "sha256": "da5b7021ac2bb7ad1b60b76e3349d29143d9c2083df928c0b40d4cb08f0cfb6f",
+      "size": 806
     },
     "DEVELOPMENT.md": {
       "sha256": "d9afa02a264de0bbe3f7317f24d31783bdcaa642be33f0c3433be90dc9ebe648",
       "size": 4322
+    },
+    "README_GITHUB.md": {
+      "sha256": "495d879d59343690df9ddd9ce018b1f7e7b26341799d2f334c6fe90e3d016b55",
+      "size": 500
+    },
+    "README_WINDOWS_BUILDS.md": {
+      "sha256": "fd59eb85591e334e939042fedae4e9bf2e485099a258fb3dc64349ebeb27839d",
+      "size": 2239
+    },
+    "README_X86_INSTALLER.txt": {
+      "sha256": "9d274b3a185194d961079a433a67c0f832f9265f017a084364839b7b0420267f",
+      "size": 791
     },
     "RELEASE_NOTES_0.3.0.md": {
       "sha256": "d6cec6fe18749c2f91f0f8031e613ea8455c6bd94b9942501e3d609220c5ad3e",
@@ -42,6 +78,10 @@
     "RELEASE_NOTES_0.3.11.md": {
       "sha256": "8b69d2f1942ed58b4b413f5a3bdfe57f255f19463fa54ecfff754902dbaa1190",
       "size": 519
+    },
+    "RELEASE_NOTES_0.3.12.md": {
+      "sha256": "f559ee26a43f32ac8422ebc923faa49fd746349d1e1a940450f40a8f07e3fbb8",
+      "size": 684
     },
     "RELEASE_NOTES_0.3.2.md": {
       "sha256": "2c4b80df64be4c4f308a23c9480bbb0f08d1da6881d9d631a9fa11f0d94d7179",
@@ -80,12 +120,12 @@
       "size": 2314
     },
     "SETUP_DESKTOP.bat": {
-      "sha256": "4577e56ae0170dd5ba4dc079ccc38d3c072846b6f29ab29a1d7bfb2a8d5a9a4e",
-      "size": 72
+      "sha256": "b9324745f89eb85bfb1e34ce023624ab74d453cb5731a5e75933785bef7b9ff3",
+      "size": 69
     },
     "START_DESKTOP.bat": {
-      "sha256": "3ee25fb33d2849c71367681514fb4a21e9245334ad4bbbd7aa1fc58b7b5675e7",
-      "size": 73
+      "sha256": "2d3f1bf4c851a8729d0f039d04341ae49f3a59554bec24f629e340487d98c9ec",
+      "size": 70
     },
     "START_HERE.md": {
       "sha256": "436288124df9ab96eaaa61faf0db8f519c24388d066ad273e26bc5a84f5632df",
@@ -131,6 +171,10 @@
       "sha256": "5673123cb5811d6f783fe92614e5215c97b074000a7802f133e140814aba1eb6",
       "size": 1094
     },
+    "VALIDATION_0.3.12.md": {
+      "sha256": "cda97272fca409138b2ee839bc888718dd49076081890f076bdba8ef89436f63",
+      "size": 1061
+    },
     "WINDOWS_TEST_FIX.md": {
       "sha256": "5ad6b10f9b8362448475ad2d1ef2fd95bf3d06826541f945b5b9d958f3a4abe0",
       "size": 1205
@@ -151,17 +195,25 @@
       "sha256": "d3fdcc3ba6af4a8f4a9419f51b4b4ba6cff06ca2b22174ad2d473acd27497458",
       "size": 3395
     },
+    "app/assets/freetarget-icon.svg": {
+      "sha256": "aed7979d56b0dda66bab86c272b419892d035a9b6f1252965d97ee304e6459ed",
+      "size": 3469
+    },
+    "app/assets/freetarget-logo.svg": {
+      "sha256": "505327a8f5b16356643f8f060035c1c79b3d724a00b313ce10acd8276be404df",
+      "size": 5039
+    },
     "app/assets/freetarget.ico": {
-      "sha256": "9375cbfd3686433390cc14d633bcd75fa155d75d9f5b8f7d79e6fb629c4c057f",
-      "size": 30364
+      "sha256": "ba6c718475835b59fae54b937966f50422a5db36de50fb483144f8e0803b121b",
+      "size": 39231
     },
     "app/assets/freetarget.png": {
-      "sha256": "c3d2aff135262ab329e70770ec473cc492934852610c347b4b73b00171e3111e",
-      "size": 3683
+      "sha256": "860e5fb4844c845606526dc40c673fa75532e8fabc2a261db3da9cb9130eb006",
+      "size": 19803
     },
     "app/assets/index.html": {
-      "sha256": "67a2cceceb440a1e23ab1d68fb3020fc104a041747978db069190a479f030dfc",
-      "size": 724139
+      "sha256": "ab1a3cad92a98a3858fe6ffd134784d83b901692a513b0346b10b9e893db7a05",
+      "size": 758305
     },
     "app/controller.py": {
       "sha256": "b8f5b81f4862abd9a12f7d02f8067013e346d379a311ac157f29bd4df636f464",
@@ -188,11 +240,11 @@
       "size": 6001
     },
     "app/storage.py": {
-      "sha256": "6102b7d37505eb01ae6ba113399ec5ed825fa0098d8cba2a6e1a026df3dd3a7f",
-      "size": 15685
+      "sha256": "9c9c3d9868a20694c39e07478a3416bdaf5565c25ac1b236c2aec6c122693f5e",
+      "size": 15903
     },
     "app/version.py": {
-      "sha256": "ca7c1bc260cab93e37a14605cba4300e895b3cde3fb0e4792bf32de221ee411b",
+      "sha256": "34acdef04bc8809a0c304412b2aa52adba50c654c949a41283bf04c4bb0d4ef7",
       "size": 143
     },
     "freETargetDesktop.spec": {
@@ -203,12 +255,16 @@
       "sha256": "97e9826cf75669435a952d3c2bfaf67306cfc0f57241f1396db84080b9beb740",
       "size": 6805
     },
+    "installer/freETargetDesktop-x86.iss": {
+      "sha256": "9e05f801a064570530c857a80014297c055881e4da5e359515010cef4a36a5c9",
+      "size": 1243
+    },
     "installer/freETargetDesktop.iss": {
-      "sha256": "9197179f1bb143fd1be5539ef47c931d7ad105d34f61c7236c857d743e078292",
-      "size": 1498
+      "sha256": "2850ba5139fbd19e24a5ba550ca910bdaf942b1345311ef537e264d9bfec7874",
+      "size": 1510
     },
     "installer/version_info.txt": {
-      "sha256": "3c9bc56b9429afe2c1d2ec1032568b202110b080d13a3f09664b9967ef43aa20",
+      "sha256": "516a904261a90d1d9b95baebdc9733eb12f3694d238d64ccc55e1f53723616f9",
       "size": 691
     },
     "progress179-qa.svg": {
@@ -224,8 +280,8 @@
       "size": 31
     },
     "tests/run_ui.py": {
-      "sha256": "ec396ceddb0c158b3c17b507748b5ac23487a8b8bbdc448ca284eb7cabbb0cbc",
-      "size": 2530
+      "sha256": "1877d84710f8033ddd5c25871f4357518e61be154bf68c3d5215680b84b4e9db",
+      "size": 2558
     },
     "tests/test_bootstrap.cjs": {
       "sha256": "af0388581395ecc27c5bfae3d7f8bc9229692f8bafb6d55c7cede0a608e59bd6",
@@ -248,7 +304,7 @@
       "size": 20738
     },
     "tests/test_release_032.py": {
-      "sha256": "e01eb544fa37ff4be23477778946d4ce9afb1c0a5db63372a7e3deac4f84cf63",
+      "sha256": "b792401f3416b92ece2f8657b746bb21384954b5ac659182e0cdb09ffd24ff71",
       "size": 2292
     },
     "tests/test_release_033.py": {
@@ -256,23 +312,23 @@
       "size": 2203
     },
     "tests/test_release_034.py": {
-      "sha256": "6d5e1178f8f7bf54acecf565252f79ea1bdf0898c6218f8f2c9485a414725596",
+      "sha256": "f57f7cec0ec621941643e05461e01a7e6534b1fd7d7867f1b98207c685261777",
       "size": 1787
     },
     "tests/test_release_035.py": {
-      "sha256": "3b281fe25736e3afccc7c4d44631ffb1a1e3cf70c0601458035d20c4b72c17e6",
+      "sha256": "dc65af17fac8cf63b1c95499047e1c601260ace57e1e14d1db16dbd095bf54a1",
       "size": 1649
     },
     "tests/test_release_036.py": {
-      "sha256": "ed023b40f816f441a70b1ee0366f4c73d50e90bf7882487aa1d59f4b8a7dfec4",
+      "sha256": "e39a647984289c8cb232d28ae4df5e7a67b65ab2990c593cb5b79471871e2a12",
       "size": 1754
     },
     "tests/test_release_037.py": {
-      "sha256": "9bc7da036a0e0fb6a0ae5a1c4696a337bd25bea0c5b7ddde4726c34ef5fdd87f",
+      "sha256": "033ca2ba07bb9cca5fcdad63b67afb8c4ec0614fb26cd2288df6d4d73bab0d60",
       "size": 3411
     },
     "tests/test_release_038.py": {
-      "sha256": "bf456cb0551fd188b413a603d7acef47b6cdce25d390fe39bd28a55eda2fb94f",
+      "sha256": "87de7c79e558a7c0e1dab3372ebd4b7a0966cd31bc778a7ccacbfafda4805721",
       "size": 3939
     },
     "tests/test_stats.cjs": {
@@ -280,8 +336,12 @@
       "size": 19141
     },
     "tests/test_storage.py": {
-      "sha256": "457c0f393ab1ae73c3df9703953f5ba78baa4b3d44a17cdb6c1959cbe522c9dc",
-      "size": 8121
+      "sha256": "ed274f4d8c82a94e0e63676b7e58c1774378f34c1ce5cf382485d52c02e97d57",
+      "size": 8906
+    },
+    "tests/test_target_gestures.cjs": {
+      "sha256": "d2b3378b2b9e9e5d9d2e1c654b6a71ab30f64c17e985258a3bb20e431a29eb97",
+      "size": 2458
     },
     "tests/test_ui.cjs": {
       "sha256": "121afb3a1ecd5b1e8cdbdc8da7c9aa3cbf6bbaf58f58425adb4fc42653e67698",
@@ -292,11 +352,11 @@
       "size": 3598
     },
     "tools/run_task.bat": {
-      "sha256": "334be20c6b59a785cfc31e21ebb72adbc0bd60b31050a6743df5fd02ec9ae87c",
-      "size": 651
+      "sha256": "67665691df23c3b15bec8c87368b9d7aca3fa7b6010812924505afce62b54077",
+      "size": 629
     },
     "tools/windows_tasks.py": {
-      "sha256": "8e0dc6a11684d2c3ca3bfd7b45b263b2bb9f84d0f442da35489c3783ec83c626",
+      "sha256": "3d920cffb40ced62e45678df1e914484b5afe2b40dc3c57df077c154a4d74913",
       "size": 6833
     }
   }

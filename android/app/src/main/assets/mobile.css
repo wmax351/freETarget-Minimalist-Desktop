@@ -368,3 +368,15 @@ html[data-form-factor="tablet"] body.dark::after {background:var(--side)}
  }
  html[data-form-factor="tablet"] #dashboardWidgets .previousTargetFrame::before {content:none}
 }
+
+/* Arabic text follows reading order while target coordinates and clock directions stay fixed. */
+html[dir="rtl"] .settingsContent {text-align:right}
+html[dir="rtl"] .settingsContent label {text-align:right}
+html[dir="rtl"] .connectionChoice label {flex-direction:row}
+html[dir="rtl"] .colorRow input,html[dir="rtl"] input[type="number"],
+html[dir="rtl"] #settingsHost,html[dir="rtl"] #targetHost {direction:ltr;text-align:left}
+html[dir="rtl"] .app,html[dir="rtl"] .phoneTopBar,html[dir="rtl"] .phoneBottomBar,
+html[dir="rtl"] .targetWrap,html[dir="rtl"] .shotrow {direction:ltr}
+html[dir="rtl"] .app>main,html[dir="rtl"] .app>aside {direction:rtl}
+html[dir="rtl"] .shotrow span {unicode-bidi:plaintext}
+html[dir="rtl"] .settingsContent {overflow-wrap:anywhere}

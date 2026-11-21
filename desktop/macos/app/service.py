@@ -33,6 +33,9 @@ class DesktopHTTPServer(ThreadingHTTPServer):
         script = (self.controller.assets / 'desktop_bootstrap.js').read_text(encoding='utf-8')
         script = script.replace('/*__FT_DESKTOP_BOOT__*/', safe_script_json(boot), 1)
         html = (self.controller.assets / 'index.html').read_text(encoding='utf-8')
+        sync = self.controller.assets / 'apple_sync.js'
+        if sync.is_file():
+            html = html.replace('<!--APPLE_PROFILE_SYNC-->', '<script>' + sync.read_text(encoding='utf-8') + '</script>', 1)
         return html.replace('<!--DESKTOP_BOOTSTRAP-->', '<script>' + script + '</script>', 1).encode('utf-8')
 
 
@@ -109,6 +112,10 @@ class DesktopHandler(bridge.Handler):
             if path == '/desktop/store':
                 result = controller.store.change(obj.get('key'), obj.get('value'), remove=obj.get('remove') is True,
                                                  expected_revision=obj.get('expected_revision'))
+            elif path == '/desktop/apple-sync-read':
+                result = controller.apple_sync_read(obj)
+            elif path == '/desktop/apple-sync-apply':
+                result = controller.apple_sync_apply(obj)
             elif path == '/desktop/export-backup':
                 result = controller.export_backup()
             elif path == '/desktop/preview-backup':

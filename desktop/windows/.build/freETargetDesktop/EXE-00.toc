@@ -5,7 +5,7 @@
  True,
  ['D:\\Free E '
   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\app\\assets\\freetarget.ico'],
- versioninfo.VSVersionInfo(ffi=versioninfo.FixedFileInfo(filevers=(0, 3, 11, 1), prodvers=(0, 3, 11, 1), mask=0x3f, flags=0x2, OS=0x40004, fileType=1, subtype=0x0, date=(0, 0)), kids=[versioninfo.StringFileInfo([versioninfo.StringTable('040904B0', [versioninfo.StringStruct('CompanyName', 'freETarget Minimalist'), versioninfo.StringStruct('FileDescription', 'freETarget Windows Desktop Beta'), versioninfo.StringStruct('FileVersion', '0.3.11-beta.1'), versioninfo.StringStruct('InternalName', 'freETargetMinimalist'), versioninfo.StringStruct('OriginalFilename', 'freETargetMinimalist.exe'), versioninfo.StringStruct('ProductName', 'freETarget Minimalist Beta'), versioninfo.StringStruct('ProductVersion', '0.3.11-beta.1')])]), versioninfo.VarFileInfo([versioninfo.VarStruct('Translation', [1033, 1200])])]),
+ versioninfo.VSVersionInfo(ffi=versioninfo.FixedFileInfo(filevers=(0, 3, 12, 1), prodvers=(0, 3, 12, 1), mask=0x3f, flags=0x2, OS=0x40004, fileType=1, subtype=0x0, date=(0, 0)), kids=[versioninfo.StringFileInfo([versioninfo.StringTable('040904B0', [versioninfo.StringStruct('CompanyName', 'freETarget Minimalist'), versioninfo.StringStruct('FileDescription', 'freETarget Windows Desktop Beta'), versioninfo.StringStruct('FileVersion', '0.3.12-beta.1'), versioninfo.StringStruct('InternalName', 'freETargetMinimalist'), versioninfo.StringStruct('OriginalFilename', 'freETargetMinimalist.exe'), versioninfo.StringStruct('ProductName', 'freETarget Minimalist Beta'), versioninfo.StringStruct('ProductVersion', '0.3.12-beta.1')])]), versioninfo.VarFileInfo([versioninfo.VarStruct('Translation', [1033, 1200])])]),
  False,
  False,
  b'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<assembly xmlns='
@@ -85,7 +85,7 @@
  [],
  False,
  False,
- 1795286746,
+ 1795300322,
  [('runw.exe',
    'D:\\Free E '
    'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\runw.exe',

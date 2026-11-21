@@ -6,6 +6,7 @@ import sqlite3
 import sys
 import tempfile
 import unittest
+from datetime import datetime, timezone
 from unittest.mock import patch
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / 'app'))
@@ -139,6 +140,21 @@ class StorageTests(unittest.TestCase):
             self.store.automatic_backup()
         self.assertEqual(len(list(self.store.backups.glob('auto-*.json'))), 30)
         self.assertEqual(manual.read_text(), 'preserve')
+
+    def test_repeated_clock_ticks_do_not_overwrite_automatic_backups(self):
+        self.populate()
+        frozen = datetime(2026, 11, 21, 12, tzinfo=timezone.utc)
+        with patch.object(storage, 'datetime') as clock:
+            clock.now.return_value = frozen
+            first = self.store.automatic_backup(daily=True)
+            self.assertIsNone(self.store.automatic_backup(daily=True))
+            second = self.store.automatic_backup()
+            self.assertNotEqual(first, second)
+            self.assertTrue(first.is_file())
+            self.assertTrue(second.is_file())
+            for _ in range(34):
+                self.store.automatic_backup()
+        self.assertEqual(len(list(self.store.backups.glob('auto-*.json'))), 30)
 
     def test_unknown_schema_is_preserved(self):
         with contextlib.closing(sqlite3.connect(self.store.path)) as db, db:

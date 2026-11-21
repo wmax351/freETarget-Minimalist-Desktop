@@ -7,7 +7,6 @@
     const storage = window.localStorage;
     window.FTDesktopStorage = {
         getItem(key) {
-            if (key === 'ft-show-demo') return 'false';
             return storage.getItem(key);
         },
         setItem: (key, value) => storage.setItem(key, value),
@@ -27,10 +26,6 @@
             attributes: true, attributeFilter: ['class', 'style']
         });
         syncNavigationColor();
-        const demo = document.getElementById('showDemo')?.closest('label');
-        demo?.setAttribute('hidden', '');
-        demo?.nextElementSibling?.setAttribute('hidden', '');
-        for (const id of ['resetDemoData', 'demoModeStatus']) document.getElementById(id)?.setAttribute('hidden', '');
         document.getElementById('settingsHost').autocapitalize = 'none';
     });
 

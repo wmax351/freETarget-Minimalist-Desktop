@@ -8,7 +8,7 @@ HTML=(ROOT/'app/assets/index.html').read_text(encoding='utf-8')
 
 class Release034Tests(unittest.TestCase):
     def test_version_and_existing_storage_schema(self):
-        self.assertEqual(APP_VERSION,'0.3.11-beta.1')
+        self.assertEqual(APP_VERSION,'0.3.12-beta.1')
         self.assertEqual(SCHEMA_VERSION,1)
     def test_footer_customize_button_and_aria_label(self):
         self.assertIn("$('themeBtn').before(customize)",HTML)

@@ -20,5 +20,5 @@ window.fetch=(input,options={})=>{
  const headers=new Headers(options.headers||(typeof input==='object'?input.headers:undefined));headers.set('X-FT-Session',boot.token);
  return originalFetch(input,{...options,headers,credentials:'same-origin'});
 };
-window.FTDesktop={async request(path,body={}){const response=await window.fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const data=await response.json();if(!response.ok)throw Error(data.error||'Desktop operation failed.');return data},get revision(){return revision}};
+window.FTDesktop={acceptAppleSync(next,values){if(!Number.isInteger(next)||next!==revision+1)throw Error("Local data changed. Reload to see synced records.");revision=next;for(const [key,value] of Object.entries(values))cache.set(key,value)},async request(path,body={}){const response=await window.fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const data=await response.json();if(!response.ok)throw Error(data.error||'Desktop operation failed.');return data},get revision(){return revision}};
 })();

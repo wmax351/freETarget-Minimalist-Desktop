@@ -14,6 +14,12 @@ def collect(destination):
         folder=destination/name;folder.mkdir(exist_ok=True)
         (folder/'METADATA.txt').write_text(str(dist.metadata),encoding='utf-8')
         for item in dist.files or []:
+            # Test fixtures and debug symbols are not license notices, even when
+            # a binary fixture has a name beginning with "copying".
+            parts = Path(str(item)).parts
+            if any(p.lower() in ('tests', 'test', 'pyobjctest', '__pycache__') or
+                   p.lower().endswith('.dsym') for p in parts):continue
+            if Path(str(item)).suffix.lower() in ('.so', '.dylib', '.a', '.o', '.pyc'):continue
             if not (Path(str(item)).name.lower().startswith(('license','copying','notice')) or 'licenses' in str(item).lower().split('/')):continue
             source=Path(dist.locate_file(item))
             if not source.is_file():continue

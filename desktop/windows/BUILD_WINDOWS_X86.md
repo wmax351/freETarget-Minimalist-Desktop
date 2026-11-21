@@ -1,4 +1,4 @@
-# Build freETarget Minimalist 0.3.11-beta.1 for 32-bit Windows 10
+# Build freETarget Minimalist 0.3.12-beta.1 for 32-bit Windows 10
 
 You can build the x86 portable app on a 64-bit Windows 11 PC.
 
@@ -19,7 +19,7 @@ You can build the x86 portable app on a 64-bit Windows 11 PC.
    If the launcher cannot find the x86 interpreter, substitute its actual path and run
    `"C:\path\to\32-bit\python.exe" tools\windows_tasks.py build-x86`.
 
-5. Find the portable ZIP at `release-x86\freETargetMinimalist-0.3.11-beta.1-Windows-x86.zip`. Extract the entire portable ZIP on the destination PC and open `freETargetMinimalist.exe` inside the extracted folder. Keep the `_internal` folder alongside it.
+5. Find the portable ZIP at `release-x86\freETargetMinimalist-0.3.12-beta.1-Windows-x86.zip`. Extract the entire portable ZIP on the destination PC and open `freETargetMinimalist.exe` inside the extracted folder. Keep the `_internal` folder alongside it.
 
 The destination PC needs Microsoft Edge WebView2 Runtime and .NET Framework 4.8.
 If WebView2 is missing on a 32-bit Windows 10 PC, download the x86 Evergreen

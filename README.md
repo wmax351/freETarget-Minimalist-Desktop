@@ -6,27 +6,27 @@ An independent live scoring application for freETarget Minimalist electronic tar
 
 **Just want to use the program? Choose your device below.** These links download the actual application files directly. You do **not** need to understand GitHub, click the green **Code** button, or download a **Source code** ZIP.
 
-### [Download Windows 64-bit (x64) installer — .exe](https://github.com/DaveStruve/freETarget-Minimalist-Desktop/releases/download/v0.3.11-beta.1/freETargetMinimalist-0.3.11-beta.1-Windows-x64-Setup.exe)
+### [Download Windows 64-bit (x64) installer — .exe](https://github.com/DaveStruve/freETarget-Minimalist-Desktop/releases/download/v0.3.11-beta.1/freETargetMinimalist-0.3.12-beta.1-Windows-x64-Setup.exe)
 
-**Windows 10 / 11 (64-bit) · v0.3.11-beta.1** — Download the installer and run it.
+**Windows 10 / 11 (64-bit) · v0.3.12-beta.1** — Download the installer and run it.
 
-### [Download Windows 32-bit (x86) installer — .exe](https://github.com/DaveStruve/freETarget-Minimalist-Desktop/releases/download/v0.3.11-beta.1/freETargetMinimalist-0.3.11-beta.1-Windows-x86-Setup.exe)
+### [Download Windows 32-bit (x86) installer — .exe](https://github.com/DaveStruve/freETarget-Minimalist-Desktop/releases/download/v0.3.11-beta.1/freETargetMinimalist-0.3.12-beta.1-Windows-x86-Setup.exe)
 
-**Windows 10 (32-bit) · v0.3.11-beta.1** — Download the installer and run it.
+**Windows 10 (32-bit) · v0.3.12-beta.1** — Download the installer and run it.
 
-### [Download Mac (Intel or Apple Silicon) — Universal ZIP](https://github.com/DaveStruve/freETarget-Minimalist-Desktop/releases/download/v0.3.11-beta.1/freETarget-Minimalist-0.3.11-beta.1-macOS-Universal.zip)
+### [Download Mac (Intel or Apple Silicon) — Signed & Notarized ZIP](https://github.com/DaveStruve/freETarget-Minimalist-Desktop/releases/download/v0.3.11-beta.1/freETarget-Minimalist-0.3.11-beta.1-macOS-Notarized.zip)
 
-**macOS 13 Ventura or later · v0.3.11-beta.1** — Download the ZIP, extract it, and open the application.
+**macOS 13 Ventura or later · v0.3.11-beta.1** — Download the ZIP, extract it, and drag freETarget Minimalist into Applications. Signed by STRUVEDESIGNS LLC and notarized by Apple, with the ticket stapled. The clean build passed Gatekeeper and all pre-distribution checks.
 
-### [Download Android (phone or tablet) — APK](https://github.com/DaveStruve/freETarget-Minimalist-Desktop/releases/download/v0.3.11-beta.1/freETarget-Minimalist-Android-0.2.2-beta.1.apk)
+### [Download Android (phone or tablet) — APK](https://github.com/DaveStruve/freETarget-Minimalist-Desktop/releases/download/v0.3.11-beta.1/freETarget-Minimalist-Android-0.2.3-beta.1.apk)
 
-**Android 11 or later · v0.2.2-beta.1** — Download the APK on your device and follow Android's installation prompts. Android may ask you to allow installation from your browser or file manager. **This beta has been tested in an emulator; physical-device testing is still pending.**
+**Android 11 or later · v0.2.3-beta.1 (build 5)** — Download the APK on your device and follow Android's installation prompts. Android may ask you to allow installation from your browser or file manager. **The previous version was tested in an emulator; this update still needs physical-device, connectivity and voice testing.**
 
 **After installing:** See the **[Wi-Fi setup guide for Windows, Mac, and Android](docs/WIFI_SETUP.md)** to connect to your freETarget in Access Point or Station Mode.
 
 [See the current v0.3.11 release and all its assets](https://github.com/DaveStruve/freETarget-Minimalist-Desktop/releases/tag/v0.3.11-beta.1) · [View all releases](https://github.com/DaveStruve/freETarget-Minimalist-Desktop/releases) · [Optional Arduino firmware source](firmware/arduino-mega/)
 
-> **For developers:** GitHub's automatic **Source code** ZIP/TAR downloads contain source code, **not installers**. Build instructions are farther down this page. Windows x64, Windows x86, and macOS v0.3.11-beta.1 installers are now published.
+> **For developers:** GitHub's automatic **Source code** ZIP/TAR downloads contain source code, **not installers**. Build instructions are farther down this page. Windows x64/x86 v0.3.12-beta.1 and macOS v0.3.11-beta.1 downloads are published.
 
 ## Connect to your target over Wi-Fi (Windows, macOS, Android)
 
@@ -48,7 +48,12 @@ freETarget Minimalist supports **two Wi-Fi connection modes on Windows, macOS, a
 
 ## What's new in the committed source
 
+**Windows 0.3.12-beta.1 / Android 0.2.3-beta.1 source refresh — November 21, 2026:** Updated branding, circular color swatches, stacked Wi-Fi mode text and additional languages including Arabic. Windows gains target pinch/pan controls; Android restores optional Demo Mode and corrects its Gradle/JDK configuration. USB and Wi-Fi remain supported. See the [Windows build guide](desktop/windows/README_WINDOWS_BUILDS.md) and [Android build guide](android/README.md). Windows x64 and x86 0.3.12-beta.1 installers are now published at the download links above, including the automatic-backup filename collision fix. The signed Android 0.2.3-beta.1 APK is also published. Its package ID and signing certificate match 0.2.2-beta.1, and its version code increases to 5; device testing remains pending.
+
+
 **Windows and macOS — 0.3.11-beta.1**
+
+Mac source refresh (November 21, 2026): updated logo, iCloud profile/session sync code, and dedicated signed-build/notarization scripts. The maintainer's clean build passed Gatekeeper and all pre-distribution checks. See the [Mac source and signing instructions](desktop/macos/README.md).
 
 - All six dashboard widgets offer **Small** and **Large** sizes. Large is the default, and existing layouts retain their saved sizes.
 - An idle shot can prompt you to start a session. Accepting carries the shot into the session; the opening stage determines whether it is scored. The prompt can be disabled in **Settings → General**.
@@ -68,12 +73,12 @@ freETarget Minimalist supports **two Wi-Fi connection modes on Windows, macOS, a
 - Includes ESP-01 Station Mode connectivity fixes, Access Point Mode support, and LED PWM set to **pin 13** rather than pin 5.
 - This is an **optional firmware update**. No compiled firmware image or new hardware-test result is included.
 
-The Android APK has been **tested successfully in an Android emulator** by the project maintainer. Testing on a physical Android phone or tablet—including real-target Wi-Fi and USB connectivity—is still pending. Desktop feature parity is not assumed. The Windows x64, Windows x86, and macOS v0.3.11-beta.1 installers have been published; additional hardware testing may still be needed. Android features and limitations are documented in the [Android README](android/README.md).
+The Android APK has been **tested successfully in an Android emulator** by the project maintainer. Testing on a physical Android phone or tablet—including real-target Wi-Fi and USB connectivity—is still pending. Desktop feature parity is not assumed. The Windows x64/x86 v0.3.12-beta.1 installers and macOS v0.3.11-beta.1 application have been published; additional hardware testing may still be needed. Android features and limitations are documented in the [Android README](android/README.md).
 
 ## Application features
 
 - Live target display, shot scores, and recent-shot direction indicators.
-- Shot-density heatmaps for live targets, saved-session reviews, and filtered statistics. Add the live Heatmap widget through **Edit Widgets**, or enable the target overlay. The overlays show the displayed series; the live widget shows all record shots (or all sighting shots during sighting). History also offers a whole-session heatmap; Statistics uses its current filters. **Heatmap settings** adjusts resolution and hotspot peakiness across all views. Colors are relative to each view; misses and synthetic shots are excluded.
+- Shot-density heatmaps for live targets, saved-session reviews, and statistics. Add the live Heatmap widget through **Edit Widgets**, or enable the target overlay. The overlays show the displayed series; the live widget shows all record shots (or all sighting shots during sighting). History also offers a whole-session heatmap. The Statistics heatmap combines available shots from all sessions selected by its filters; summary-only sessions cannot contribute shots. **Heatmap settings** adjusts resolution and hotspot peakiness across all views. Colors are relative to each view; misses and synthetic shots are excluded.
 - Editable dashboard widgets, customizable appearance, and optional spoken scores.
 - Shooter profiles with multiple guns and session tracking by gun.
 - Saved sessions, statistics, and performance comparisons.
@@ -88,9 +93,9 @@ The application and Arduino Mega firmware source imports are complete.
 
 | Project | Committed source version | Build documentation |
 | --- | --- | --- |
-| [Windows x64 and x86](desktop/windows/) | 0.3.11-beta.1 | [Windows build and installer instructions](desktop/windows/README_WINDOWS_BUILDS.md) |
+| [Windows x64 and x86](desktop/windows/) | 0.3.12-beta.1 (x64 and x86 installers published) | [Windows build and installer instructions](desktop/windows/README_WINDOWS_BUILDS.md) |
 | [macOS Universal](desktop/macos/) | 0.3.11-beta.1 | [Mac Universal build instructions](desktop/macos/BUILD_UNIVERSAL_MAC.md) |
-| [Android](android/) | 0.2.2-beta.1 — versionCode 4 | [Android build and connection instructions](android/README.md) |
+| [Android](android/) | 0.2.3-beta.1 — versionCode 5 (signed APK published) | [Android build and connection instructions](android/README.md) |
 | [Arduino Mega firmware](firmware/arduino-mega/) | Wi-Fi fixes / LED PWM pin 13 | [Firmware build and flashing instructions](firmware/arduino-mega/README.md) |
 
 Build from each platform's directory to preserve the relative paths expected by its scripts. Windows and macOS retain separate source snapshots with platform-specific changes. Experimental iOS preview files are preserved inside the Mac source; no iOS release is published here.

@@ -86,6 +86,14 @@
    'D:\\Free E '
    'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\app\\assets\\desktop_ui.js',
    'DATA'),
+  ('assets\\freetarget-icon.svg',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\app\\assets\\freetarget-icon.svg',
+   'DATA'),
+  ('assets\\freetarget-logo.svg',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\app\\assets\\freetarget-logo.svg',
+   'DATA'),
   ('assets\\freetarget.ico',
    'D:\\Free E '
    'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\app\\assets\\freetarget.ico',

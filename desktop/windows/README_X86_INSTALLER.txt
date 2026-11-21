@@ -1,4 +1,4 @@
-freETarget Minimalist 0.3.11-beta.1 — Windows x86 build and installer
+freETarget Minimalist 0.3.12-beta.1 — Windows x86 build and installer
 
 1. Install Python 3.12 (32-bit), and verify: py -3.12-32 -c "import struct; print(struct.calcsize('P')*8)"  (must print 32).
 2. Install Inno Setup 6 from https://jrsoftware.org/isinfo.php

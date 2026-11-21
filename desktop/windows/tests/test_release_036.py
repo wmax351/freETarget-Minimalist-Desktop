@@ -5,7 +5,7 @@ ROOT=pathlib.Path(__file__).resolve().parents[1]
 HTML=(ROOT/'app/assets/index.html').read_text(encoding='utf-8')
 class Release036Tests(unittest.TestCase):
  def test_version_and_storage_compatibility(self):
-  self.assertEqual(APP_VERSION,'0.3.11-beta.1')
+  self.assertEqual(APP_VERSION,'0.3.12-beta.1')
   self.assertEqual(SCHEMA_VERSION,1)
   self.assertIn("const DASHBOARD_LAYOUT_KEY='ft-dashboard-widgets-v1'",HTML)
  def test_edit_widgets_toggle_and_visible_state(self):

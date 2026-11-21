@@ -1,36 +1,34 @@
-> Updated desktop release notes: `RELEASE_NOTES_0.3.5.md`. iOS preview remains unchanged.
+# freETarget Minimalist for macOS
 
-# freETarget Minimalist Desktop Beta
+Mac source version **0.3.11-beta.1**, with Universal support for Intel and Apple Silicon Macs, Wi-Fi/TCP and USB target connections, shooter profiles, session history, target zoom/pan, and the updated logo.
 
-**Designed for the freETarget Minimalist build.** Independent project, based on the corrected Windows beta and v1.7.9 scoring UI. Other builds and firmware combinations remain unverified.
+## Build and notarize
 
-Version **0.3.5-beta.1** is a source preview starting two ports:
+From this repository's `desktop/macos/` directory:
 
-| Platform | Implementation | First connection scope | Build on |
-|---|---|---|---|
-| macOS | Existing Python bridge/SQLite + native Cocoa/WebKit window | TCP/Wi-Fi and USB | Mac, universal2 Python 3.13 recommended/PyInstaller |
-| iOS/iPadOS | SwiftUI/WKWebView, native TCP and SQLite, shared scoring UI | Wi-Fi/TCP; no USB or target editing | Mac, Xcode |
+```bash
+bash BUILD_SIGNED_MAC.command
+bash NOTARIZE_MAC.command
+```
 
-Open **START_HERE.txt** for the short launch/build instructions, and **BUILD_UNIVERSAL_MAC.md** to package for both Apple Silicon and Intel. The package includes a real `.xcodeproj` with bundled Web assets and icons, not just an architecture proposal. Native Apple compilation, signing and device acceptance are pending; no compiled Apple app is included.
+The signed build requires a Developer ID Application identity and a Developer ID provisioning profile authorizing the shared iCloud container. Configure `FREETARGET_MAC_SIGN_IDENTITY` and `FREETARGET_MAC_ICLOUD_PROFILE` for your own team. The script defaults are the maintainer's local setup; certificates, private keys, profiles and passwords are not committed.
 
-The desktop scoring/session/statistics/voice implementation is shared rather than rewritten. iOS uses a native local service adapter, stream framer, durable key/value database and document pickers. It cannot run the Python USB/command bridge; unsupported controls/endpoints are hidden or rejected. `ios/mobile.css` changes the phone/tablet layout without changing the Windows distribution.
+Notarization uses the local Keychain credential profile `freETarget-notary`, or `FREETARGET_NOTARY_PROFILE` when set. The script submits, staples, validates, then runs Gatekeeper and system-policy checks. It produces the distribution ZIP only after those checks pass.
 
-## Data
+For a local build without configured Developer ID signing, use `bash BUILD_MAC.command`. That alone does not create a notarized public release.
 
-Mac records live in `~/Library/Application Support/freETarget/DesktopBeta`. iOS records live inside its app container. Backups use the desktop schema-1 JSON format, with manual import/export. There is no automatic sync and imports replace data rather than merging it. Finish/log a session before export and test round trips with disposable records first.
+See [Universal build instructions](BUILD_UNIVERSAL_MAC.md) and [clean build walkthrough](START_CLEAN_MAC.md).
 
-The iOS native store and backup codec are new implementations and need their included Swift tests plus actual-device acceptance. Passing desktop/JavaScript simulations does not establish native iOS correctness. Leaving iOS stops/pauses its current sequence and disconnects; unlogged shots remain in memory only.
+## Apple device sync
 
-## Reference firmware
+The Mac source uses the shared iCloud Documents container `iCloud.designs.struve.freetarget.sync`. Compatible Mac, iPhone and iPad builds signed by the same developer team can sync shooter profiles and saved sessions for the same iCloud account. Use Settings → Backup → Apple Device Sync to confirm the account, sync manually, and optionally enable automatic sync. Automatic sync runs while the app is open and idle; it is not an iOS background service.
 
-`reference/freETarget_WiFi_LED_Pin13.zip` is copied unchanged from the confirmed Windows closed-beta package. Its source identifies 4.2.8 WiFi Test 1, Mega 2560, station-mode changes, LED PWM 13 and TCP 1090. Firmware notes retain the duplicate LED definition/wiring limits. No firmware changes or flashing actions are part of either Apple app build.
+Local data remains under `~/Library/Application Support/freETarget/DesktopBeta`. Back up records before upgrading. Independent developers must register and configure their own App IDs, shared container and profiles.
 
-## Development
+## Validation
 
-See BUILD_AND_TEST.md, ARCHITECTURE.md and TEST_RESULTS.md. The Python/Node checks run in this Linux workspace. Swift native core tests are included for `swift test` on a Mac; they were not executed here. The Xcode project generator is optional—the generated project is included. If shared Web assets change, rerun `tools/prepare_ios.py` before building iOS.
+On November 21, 2026 the maintainer reported that the clean Mac build passed stapler validation, Gatekeeper assessment (`Notarized Developer ID`), and all system-policy pre-distribution checks. The maintainer also reported the app working in testing. Portable automated checks: 91 Python tests passed; shell syntax checks passed. These results apply to that compiled build, not automatically to every rebuild.
 
-Original attribution/notices are in `licenses/` and THIRD_PARTY_NOTICES.md. This package does not assign a new license to upstream materials. No publication, invitations, signing credentials or automatic update service are configured.
+The release asset is published separately from source commits. Use the [release page](https://github.com/DaveStruve/freETarget-Minimalist-Desktop/releases/tag/v0.3.11-beta.1) for currently available application downloads.
 
-The macOS launch scripts automatically select Python 3.12–3.15. Python 3.15 is enabled for first-run testing, not yet validated on Apple hardware.
-
-**Universal Mac packaging:** `BUILD_MAC.command` now targets both Apple Silicon and Intel; use a Python.org universal2 Python interpreter. `BUILD_MAC_NATIVE.command` builds for the current architecture only. No compiled app is included in this source ZIP.
+Experimental iOS preview sources in this directory are retained; the current iOS app is released separately. See `licenses/` and `THIRD_PARTY_NOTICES.md` for attribution.

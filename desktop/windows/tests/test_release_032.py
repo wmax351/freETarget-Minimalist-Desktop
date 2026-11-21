@@ -22,7 +22,7 @@ class Release032Tests(unittest.TestCase):
     def test_languages_and_version(self):
         from app.version import APP_NAME,APP_VERSION,SCHEMA_VERSION
         self.assertEqual(APP_NAME,'freETarget Minimalist')
-        self.assertEqual(APP_VERSION,'0.3.11-beta.1')
+        self.assertEqual(APP_VERSION,'0.3.12-beta.1')
         self.assertEqual(SCHEMA_VERSION,1)
         self.assertIn('data-settings-tab="languages"',HTML)
         for lang in ('hi','zh-CN','zh-TW','ja','es','de','fr','it','pt'):

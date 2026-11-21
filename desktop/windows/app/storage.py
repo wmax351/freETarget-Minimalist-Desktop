@@ -11,6 +11,7 @@ import re
 import sqlite3
 import tempfile
 import threading
+import uuid
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 
@@ -270,7 +271,9 @@ class DataStore:
             if daily and any(self.backups.glob('auto-' + today + '-*.json')):
                 return None
             stamp = datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S-%f')
-            path = self.backups / (prefix + '-' + stamp + '.json')
+            # Windows clock ticks can repeat across rapid writes. Never reuse
+            # a destination name, since atomic_write replaces existing files.
+            path = self.backups / (prefix + '-' + stamp + '-' + uuid.uuid4().hex + '.json')
             atomic_write(path, self.backup_bytes(state))
             self._prune_backups()
             return path
@@ -293,7 +296,7 @@ class DataStore:
             backup = None
             if current:
                 stamp = datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S-%f')
-                backup = self.backups / ('before-restore-' + stamp + '.json')
+                backup = self.backups / ('before-restore-' + stamp + '-' + uuid.uuid4().hex + '.json')
                 atomic_write(backup, self.backup_bytes(dict(storage=current, revision=revision)))
             db.execute('DELETE FROM kv')
             now = datetime.now(timezone.utc).isoformat()

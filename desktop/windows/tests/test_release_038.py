@@ -27,10 +27,10 @@ class SidebarParser(HTMLParser):
 
 class Release038Tests(unittest.TestCase):
     def test_version_schema_and_existing_layout_storage(self):
-        self.assertEqual(APP_VERSION,'0.3.11-beta.1')
+        self.assertEqual(APP_VERSION,'0.3.12-beta.1')
         self.assertEqual(SCHEMA_VERSION,1)
         self.assertIn("const DASHBOARD_LAYOUT_KEY='ft-dashboard-widgets-v1'",HTML)
-        self.assertIn('freETarget Minimalist 0.3.11</span>',HTML)
+        self.assertIn('freETarget Minimalist 0.3.12</span>',HTML)
     def test_sidebar_hierarchy_and_fixed_connection(self):
         sidebar=HTML.split('<aside class="ftSidebar">',1)[1].split('<nav aria-label="Primary navigation"',1)[0]
         self.assertLess(sidebar.index('class="brandRow"'),sidebar.index('class="sidebarTopScroll"'))

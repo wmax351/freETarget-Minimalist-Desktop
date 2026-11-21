@@ -1,11 +1,11 @@
 VSVersionInfo(
-  ffi=FixedFileInfo(filevers=(0, 3, 11, 1), prodvers=(0, 3, 11, 1), mask=0x3f, flags=0x2, OS=0x40004, fileType=0x1, subtype=0x0, date=(0, 0)),
+  ffi=FixedFileInfo(filevers=(0, 3, 12, 1), prodvers=(0, 3, 12, 1), mask=0x3f, flags=0x2, OS=0x40004, fileType=0x1, subtype=0x0, date=(0, 0)),
   kids=[StringFileInfo([StringTable('040904B0', [
     StringStruct('CompanyName', 'freETarget Minimalist'),
     StringStruct('FileDescription', 'freETarget Windows Desktop Beta'),
-    StringStruct('FileVersion', '0.3.11-beta.1'),
+    StringStruct('FileVersion', '0.3.12-beta.1'),
     StringStruct('InternalName', 'freETargetMinimalist'),
     StringStruct('OriginalFilename', 'freETargetMinimalist.exe'),
     StringStruct('ProductName', 'freETarget Minimalist Beta'),
-    StringStruct('ProductVersion', '0.3.11-beta.1')
+    StringStruct('ProductVersion', '0.3.12-beta.1')
   ])]), VarFileInfo([VarStruct('Translation', [1033, 1200])])])

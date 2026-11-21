@@ -1,4 +1,4 @@
-#define AppVersion "0.3.11-beta.1"
+#define AppVersion "0.3.12-beta.1"
 [Setup]
 AppId={{C8C3D90F-EBE2-4B6B-9D78-1BC0F1A6D3E1}
 AppName=freETarget Minimalist (32-bit)

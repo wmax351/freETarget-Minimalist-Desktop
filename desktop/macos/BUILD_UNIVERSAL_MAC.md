@@ -47,11 +47,11 @@ It should print **`x86_64 arm64`** (order may differ). The build script addition
 ## Testing and distribution
 
 - Test the app on Apple Silicon and an Intel Mac, including USB/Wi-Fi connection, a live shot, logging a session, and reopening saved data.
-- The application has **not** been signed with a Developer ID or notarized. Apple may restrict launching a downloaded unsigned app. Do not distribute it publicly as a verified, notarized installer yet.
+- For a signed iCloud-enabled distribution build, use `bash BUILD_SIGNED_MAC.command`, then `bash NOTARIZE_MAC.command`. Set your own signing identity/profile through the documented environment variables. The notarization script stops if any acceptance check fails.
 - Saved shooter/gun/session data remains under `~/Library/Application Support/freETarget/DesktopBeta`. Back up records before upgrading.
 - To build only for your current Mac's CPU instead, use `bash BUILD_MAC_NATIVE.command`. That build's ZIP ends in `-arm64.zip` or `-x86_64.zip`.
 
-**Important:** This source directory does not contain a compiled `.app`. The build must be run on macOS. Universal build logic and portable tests were checked in the development environment; a real macOS build and Intel/Apple Silicon acceptance tests are still required.
+**Important:** This source directory does not contain a compiled `.app`. The build must be run on macOS. The maintainer's clean rebuild passed notarization, stapler, Gatekeeper and system-policy checks on November 21, 2026. Every rebuild still requires its own verification and device testing.
 
 ## Interpreter override (optional)
 
@@ -62,3 +62,7 @@ FT_UNIVERSAL_PYTHON=/Library/Frameworks/Python.framework/Versions/3.15/bin/pytho
 ```
 
 The override is also used by the isolated selector unit test so an installed Python 3.15 cannot override its fake Python 3.13 fixture.
+
+## Signed iCloud build
+
+See [START_CLEAN_MAC.md](START_CLEAN_MAC.md) for the signing and notarization walkthrough. When working from this repository, use `desktop/macos/` as the source folder instead of the standalone ZIP folder shown there.

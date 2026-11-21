@@ -4,7 +4,9 @@ import argparse
 import json
 import os
 import platform
+import plistlib
 import subprocess
+import shutil
 import sys
 import sysconfig
 import venv
@@ -20,6 +22,31 @@ MACHO_MAGICS = {
     b'\xca\xfe\xba\xbf', b'\xbf\xba\xfe',  # fat Mach-O (64-bit)
 }
 REQUIRED_UNIVERSAL_ARCHES = {'arm64', 'x86_64'}
+
+
+def icloud_entitlements(profile, bundle_id):
+    """Resolve required signing identifiers from an authorised Mac profile."""
+    allowed = profile['Entitlements']
+    team = allowed['com.apple.developer.team-identifier']
+    app_id = allowed['com.apple.application-identifier']
+    if app_id != team + '.' + bundle_id:
+        raise ValueError('Provisioning profile does not match the Mac bundle identifier.')
+    if 'OSX' not in profile.get('Platform', []) or not profile.get('ProvisionsAllDevices'):
+        raise ValueError('Use a Developer ID provisioning profile for macOS distribution.')
+    entitlements = plistlib.loads((ROOT / 'mac/icloud-entitlements.plist').read_bytes())
+    for key in ('com.apple.developer.icloud-container-identifiers',
+                'com.apple.developer.ubiquity-container-identifiers'):
+        if not set(entitlements[key]).issubset(allowed.get(key, [])):
+            raise ValueError('Provisioning profile does not authorise the shared iCloud container.')
+    services = allowed.get('com.apple.developer.icloud-services', [])
+    if services != '*' and 'CloudDocuments' not in services:
+        raise ValueError('Provisioning profile does not authorise iCloud Documents.')
+    entitlements['com.apple.application-identifier'] = app_id
+    entitlements['com.apple.developer.team-identifier'] = team
+    if 'com.apple.developer.icloud-container-environment' in allowed:
+        entitlements['com.apple.developer.icloud-container-environment'] = allowed[
+            'com.apple.developer.icloud-container-environment']
+    return entitlements
 
 
 def macho_arches(path):
@@ -109,6 +136,23 @@ def main():
     if requested_arch == 'universal2':
         require_universal_python()
 
+    profile = os.environ.get('FREETARGET_MAC_ICLOUD_PROFILE')
+    identity = os.environ.get('FREETARGET_MAC_SIGN_IDENTITY')
+    signing_plist = None
+    if profile:
+        if not identity:
+            raise SystemExit('Set FREETARGET_MAC_SIGN_IDENTITY for the iCloud profile.')
+        profile = Path(profile).expanduser().resolve()
+        if not profile.is_file():
+            raise SystemExit('Provisioning profile not found: %s' % profile)
+        decoded = subprocess.run(['security', 'cms', '-D', '-i', str(profile)],
+                                 check=True, capture_output=True)
+        resolved = icloud_entitlements(plistlib.loads(decoded.stdout),
+                                      'designs.struve.freetarget.desktop.preview')
+        signing_plist = ROOT / '.build/mac-signing/entitlements.plist'
+        signing_plist.parent.mkdir(parents=True, exist_ok=True)
+        signing_plist.write_bytes(plistlib.dumps(resolved))
+
     # Keep universal2 and single-arch dependencies in different environments.
     # This also prevents accidental reuse of a previous Homebrew ARM-only venv.
     env_tag = '-universal2' if requested_arch == 'universal2' else ''
@@ -138,6 +182,13 @@ def main():
     executable = app / 'Contents/MacOS/freETargetMinimalist'
     if not executable.is_file():
         raise SystemExit('The expected .app was not produced.')
+
+    if profile:
+        shutil.copyfile(profile, app / 'Contents/embedded.provisionprofile')
+        subprocess.run(['codesign', '--force', '--options', 'runtime', '--timestamp',
+                        '--sign', identity, '--entitlements', str(signing_plist),
+                        str(app)], check=True)
+        subprocess.run(['codesign', '--verify', '--deep', '--strict', str(app)], check=True)
 
     architecture = requested_arch or platform.machine()
     if architecture == 'universal2':

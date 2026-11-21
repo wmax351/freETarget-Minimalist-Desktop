@@ -15,7 +15,7 @@ import zipfile
 from datetime import datetime, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-VERSION = '0.3.11-beta.1'
+VERSION = '0.3.12-beta.1'
 PE_MACHINES = {'x86': 0x014C, 'x64': 0x8664}
 
 
