@@ -2491,7 +2491,7 @@ function initDashboardWidgets(){
 }
 function moveWidget(source,target){if(source===target)return;const from=dashboardLayout.findIndex(w=>w.id===source),to=dashboardLayout.findIndex(w=>w.id===target);if(from<0||to<0)return;const [item]=dashboardLayout.splice(from,1);dashboardLayout.splice(to,0,item);saveDashboardLayout();applyDashboardLayout()}
 function moveWidgetStep(id,delta){const from=dashboardLayout.findIndex(w=>w.id===id);if(from<0)return;const to=Math.max(0,Math.min(dashboardLayout.length-1,from+delta));if(to===from)return;const [item]=dashboardLayout.splice(from,1);dashboardLayout.splice(to,0,item);saveDashboardLayout();applyDashboardLayout()}
-function setWidgetVisible(id,visible){const config=dashboardLayout.find(w=>w.id===id);if(!config)return;config.visible=visible;saveDashboardLayout();applyDashboardLayout()}
+function setWidgetVisible(id,visible){const config=dashboardLayout.find(w=>w.id===id);if(!config)return;config.visible=visible;saveDashboardLayout();applyDashboardLayout();renderDashboardWidgets()}
 function setWidgetSize(id,size){const config=dashboardLayout.find(w=>w.id===id);if(!config||!DASHBOARD_WIDGET_SIZES.includes(size))return;config[widgetSizeKey()]=size;saveDashboardLayout();applyDashboardLayout()}
 function applyDashboardLayout(){
  const grid=$('dashboardWidgets');if(!grid)return;
@@ -2568,6 +2568,91 @@ function renderSessionDetails(){
 }
 function renderDashboardWidgets(){if(typeof document.querySelector!=='function'||!$('dashboardWidgets'))return;if(widgetById('scorecard')&&!widgetById('scorecard').hidden)renderScorecard();if(widgetById('sessionDetails')&&!widgetById('sessionDetails').hidden)renderSessionDetails();if(currentLanguage!=='en')scheduleTranslation()}
 function updateDashboardWidgetClock(){if(typeof document.querySelector!=='function')return;const second=Math.floor(sessionElapsed()/1000);if(second===lastWidgetClockSecond)return;lastWidgetClockSecond=second;if(widgetById('sessionDetails')&&!widgetById('sessionDetails').hidden){updateWidgetTiming();if(currentStage()?.kind==='sighting')renderSessionDetails()}}
+
+// Heatmaps use the same coordinates and hit exclusions as the grouping statistics.
+const HEATMAP_SPEC={id:'heatmap',name:'Heatmap',sizes:['small','large'],defaultSize:'large',visible:false};
+DASHBOARD_WIDGETS.push(HEATMAP_SPEC);
+let heatmapResolution=50,heatmapPeakiness=3,heatmapSettingsError='';
+try{
+ const saved=appStorage.getItem('ft-heatmap-settings-v1');
+ if(saved!==null){const settings=JSON.parse(saved);if(!settings||!Number.isInteger(settings.resolution)||settings.resolution<25||settings.resolution>100||settings.resolution%5||!Number.isInteger(settings.peakiness)||settings.peakiness<1||settings.peakiness>5)throw Error('Invalid saved heatmap settings');heatmapResolution=settings.resolution;heatmapPeakiness=settings.peakiness}
+}catch(error){heatmapSettingsError='Could not load heatmap settings: '+error.message}
+function heatmapHits(data){return data.filter(s=>s&&finiteNumber(s.x)&&finiteNumber(s.y)&&![true,1,'1'].includes(s.miss)&&!s.timeout&&!s.skipped&&!['timeout','stage-advance'].includes(s.source))}
+function heatmapDensity(data,outerRing,side=heatmapResolution,peakiness=heatmapPeakiness){
+ const hits=heatmapHits(data),step=400/side,sigma=26-4*peakiness,reach=3*sigma,values=new Float64Array(side*side);
+ for(const hit of hits){
+  const x=200+hit.x*340/outerRing,y=200+hit.y*340/outerRing;
+  const x0=Math.max(0,Math.ceil((x-reach)/step-.5)),x1=Math.min(side-1,Math.floor((x+reach)/step-.5));
+  const y0=Math.max(0,Math.ceil((y-reach)/step-.5)),y1=Math.min(side-1,Math.floor((y+reach)/step-.5));
+  for(let row=y0;row<=y1;row++)for(let col=x0;col<=x1;col++){const dx=(col+.5)*step-x,dy=(row+.5)*step-y;values[row*side+col]+=Math.exp(-(dx*dx+dy*dy)/(2*sigma*sigma))}
+ }
+ return {hits:hits.length,values,side,step,max:values.reduce((a,b)=>Math.max(a,b),0)};
+}
+function paintHeatmap(svg,data,discipline){
+ const density=heatmapDensity(data,dims[discipline].rings[0]),g=svg.querySelector('g');
+ if(!g||!density.max)return density.hits;
+ const layer=node('g',{'pointer-events':'none','aria-hidden':'true',opacity:.65});
+ for(let i=0;i<density.values.length;i++){
+  const value=density.values[i]/density.max;if(value<.04)continue;
+  const hue=Math.round(240*(1-Math.min(1,value)));layer.append(node('rect',{x:(i%density.side)*density.step,y:Math.floor(i/density.side)*density.step,width:density.step+.1,height:density.step+.1,fill:`hsl(${hue},100%,50%)`,opacity:Math.min(1,value*3)}));
+ }
+ g.append(layer);return density.hits;
+}
+function heatmapDescription(count,scope){return scope+' · '+count+' valid hits. Blue is lower density; red is higher density relative to this view. Misses and synthetic shots excluded.'}
+function heatmapTarget(svg,data,discipline,note,scope){
+ drawTarget(svg,[], -1,1,discipline);
+ const count=paintHeatmap(svg,data,discipline);note.textContent=heatmapDescription(count,scope);
+}
+function initHeatmaps(){
+ if(typeof document.querySelector!=='function'||!$('dashboardWidgets'))return;
+ const grid=$('dashboardWidgets'),panel=createWidgetPanel('heatmap','Heatmap','<svg id="liveHeatmap" viewBox="0 0 400 400" role="img" aria-label="Session shot density target" style="display:block;width:100%;max-width:400px;margin:auto"></svg><p class="note" id="liveHeatmapNote"></p>');
+ grid.append(panel);applyDashboardLayout();
+ const liveControl=document.createElement('label');liveControl.className='checkLabel';liveControl.title='Heatmap of the shots on the displayed target';liveControl.style.cssText='pointer-events:auto;background:var(--paper);padding:5px';liveControl.innerHTML='<input id="liveHeatmapOverlay" type="checkbox"> Heatmap';
+ document.querySelector('.targetHead .controls').prepend(liveControl);$('liveHeatmapOverlay').onchange=()=>renderTarget();
+ const historyControl=document.createElement('label');historyControl.className='checkLabel';historyControl.title='Heatmap of the displayed series';historyControl.innerHTML='<input id="historyHeatmapOverlay" type="checkbox"> Heatmap overlay';
+ document.querySelector('.historyTargetHeading').append(historyControl);$('historyHeatmapOverlay').onchange=()=>renderSavedReview();
+ const historyPanel=document.createElement('details');historyPanel.className='historyTargetCard';historyPanel.style.marginTop='16px';historyPanel.innerHTML='<summary>Session heatmap</summary><svg id="savedHeatmap" viewBox="0 0 400 400" role="img" aria-label="Saved session shot density target" style="display:block;width:100%;max-width:400px;margin:auto"></svg><p class="note" id="savedHeatmapNote"></p>';
+ $('savedReviewMeta').before(historyPanel);
+ const statsPanel=document.createElement('details');statsPanel.className='statsDetails';statsPanel.innerHTML='<summary>Shot density heatmap</summary><svg id="statisticsHeatmap" viewBox="0 0 400 400" role="img" aria-label="Filtered session shot density target" style="display:block;width:100%;max-width:400px;margin:auto"></svg><p class="note" id="statisticsHeatmapNote"></p>';
+ $('progressTitle').after(statsPanel);
+ const settings=document.createElement('div');settings.className='settingsOverlay';settings.hidden=true;settings.innerHTML='<section class="settingsWindow" role="dialog" aria-modal="true" aria-labelledby="heatmapSettingsTitle" style="max-width:480px"><header><strong id="heatmapSettingsTitle">Heatmap settings</strong><button type="button" id="heatmapSettingsClose" aria-label="Close heatmap settings">×</button></header><div class="settingsContent"><p class="settingsHelp">These settings apply to all heatmaps.</p><label>Resolution: <output id="heatmapResolutionValue"></output><input id="heatmapResolution" aria-label="Heatmap resolution" type="range" min="25" max="100" step="5"></label><p class="settingsHelp">Higher resolution uses smaller cells.</p><label>Peakiness: <output id="heatmapPeakinessValue"></output><input id="heatmapPeakiness" aria-label="Heatmap peakiness" type="range" min="1" max="5" step="1"></label><p class="settingsHelp">Higher peakiness makes hotspots tighter.</p><p id="heatmapSettingsStatus" class="settingsHelp" role="status"></p><button type="button" class="settingsSave" id="heatmapSettingsDone">Done</button></div></section>';
+ document.body.append(settings);
+ let settingsTrigger=null;
+ const openSettings=e=>{settingsTrigger=e.currentTarget;$('heatmapResolution').value=heatmapResolution;$('heatmapPeakiness').value=heatmapPeakiness;$('heatmapResolutionValue').textContent=heatmapResolution+' × '+heatmapResolution;$('heatmapPeakinessValue').textContent=heatmapPeakiness;$('heatmapSettingsStatus').textContent=heatmapSettingsError;settings.hidden=false;$('heatmapSettingsClose').focus()};
+ const settingsButton=()=>{const button=document.createElement('button');button.type='button';button.className='btn';button.textContent='Heatmap settings';button.onclick=openSettings;return button};
+ document.querySelector('.targetHead .controls').append(settingsButton());document.querySelector('.historyTargetHeading').after(settingsButton());panel.querySelector('.collapseBody').prepend(settingsButton());statsPanel.querySelector('summary').after(settingsButton());
+ const closeSettings=()=>{settings.hidden=true;settingsTrigger?.focus()};
+ $('heatmapSettingsClose').onclick=closeSettings;$('heatmapSettingsDone').onclick=closeSettings;settings.onclick=e=>{if(e.target===settings)closeSettings()};document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!settings.hidden)closeSettings()});
+ const updateSettings=()=>{heatmapResolution=Number($('heatmapResolution').value);heatmapPeakiness=Number($('heatmapPeakiness').value);$('heatmapResolutionValue').textContent=heatmapResolution+' × '+heatmapResolution;$('heatmapPeakinessValue').textContent=heatmapPeakiness;renderTarget();renderDashboardWidgets();if(historyReviewItem)renderSavedReview();if(statsPanel.open)renderStatistics()};
+ const saveSettings=()=>{try{appStorage.setItem('ft-heatmap-settings-v1',JSON.stringify({resolution:heatmapResolution,peakiness:heatmapPeakiness}));heatmapSettingsError=''}catch(error){heatmapSettingsError='Could not save heatmap settings: '+error.message}$('heatmapSettingsStatus').textContent=heatmapSettingsError};
+ for(const id of ['heatmapResolution','heatmapPeakiness']){$(id).oninput=updateSettings;$(id).onchange=saveSettings}
+ const originalDrawTarget=drawTarget;
+ drawTarget=function(svg,data,focus,level,discipline){
+  originalDrawTarget(svg,data,focus,level,discipline);
+  if((svg.id==='targetSvg'&&$('liveHeatmapOverlay').checked)||(svg.id==='savedReviewTarget'&&$('historyHeatmapOverlay').checked))paintHeatmap(svg,data,discipline||$('discipline').value);
+ };
+ const originalWidgets=renderDashboardWidgets;
+ renderDashboardWidgets=function(){
+  originalWidgets();
+  if(!panel.hidden){const sighting=isFiveLive()?runtime.five.isSighting:!!(runtime&&currentStage()?.kind==='sighting');heatmapTarget($('liveHeatmap'),sighting?sightingShots:shots,$('discipline').value,$('liveHeatmapNote'),sighting?'All sighting shots':'All record shots')}
+ };
+ const originalReview=renderSavedReview;
+ renderSavedReview=function(){
+  originalReview();if(historyReviewItem&&historyPanel.open)heatmapTarget($('savedHeatmap'),historyReviewItem.shotData,savedDiscipline(historyReviewItem),$('savedHeatmapNote'),'All recorded shots');
+ };
+ historyPanel.ontoggle=()=>{if(historyPanel.open&&historyReviewItem)renderSavedReview()};
+ const originalStatistics=renderStatistics;
+ renderStatistics=function(){
+  originalStatistics();if(!statsPanel.open)return;
+  const filtered=filteredHistory(historyForActiveShooter()),data=filtered.records.flatMap(({item})=>Array.isArray(item.shotData)?item.shotData:[]);
+  heatmapTarget($('statisticsHeatmap'),data,$('historyDiscipline').value,$('statisticsHeatmapNote'),'Filtered sessions');
+  const missing=filtered.records.filter(({item})=>!Array.isArray(item.shotData)).length;
+  if(missing)$('statisticsHeatmapNote').textContent+=' '+missing+' summary-only sessions excluded.';
+ };
+ statsPanel.ontoggle=()=>{if(statsPanel.open)renderStatistics()};
+}
+const originalInitDashboardWidgets=initDashboardWidgets;
+initDashboardWidgets=function(){originalInitDashboardWidgets();initHeatmaps()};
 
 initDesktopData();
 loadShooters();refreshSessionOptions();loadRuleCatalog();renderColorFields();initSpeechSettings();initGeneral173();initConnections173();initTargetPanels();initCustomLogo();initLanguageSettings();initDashboardWidgets();syncSidebarFormFactor();

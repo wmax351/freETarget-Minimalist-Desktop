@@ -1,0 +1,68 @@
+('D:\\Free E '
+ 'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.build\\freETargetDesktop\\freETargetMinimalist.pkg',
+ {'BINARY': True,
+  'DATA': True,
+  'EXECUTABLE': True,
+  'EXTENSION': True,
+  'PYMODULE': True,
+  'PYSOURCE': True,
+  'PYZ': False,
+  'SPLASH': True,
+  'SYMLINK': False},
+ [('pyi-contents-directory _internal', '', 'OPTION'),
+  ('PYZ-00.pyz',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.build\\freETargetDesktop\\PYZ-00.pyz',
+   'PYZ'),
+  ('struct',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.build\\freETargetDesktop\\localpycs\\struct.pyc',
+   'PYMODULE'),
+  ('pyimod01_archive',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.build\\freETargetDesktop\\localpycs\\pyimod01_archive.pyc',
+   'PYMODULE'),
+  ('pyimod02_importers',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.build\\freETargetDesktop\\localpycs\\pyimod02_importers.pyc',
+   'PYMODULE'),
+  ('pyimod03_ctypes',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.build\\freETargetDesktop\\localpycs\\pyimod03_ctypes.pyc',
+   'PYMODULE'),
+  ('pyimod04_pywin32',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.build\\freETargetDesktop\\localpycs\\pyimod04_pywin32.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgutil',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('pyi_rth_setuptools',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_setuptools.py',
+   'PYSOURCE'),
+  ('desktop',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\app\\desktop.py',
+   'PYSOURCE')],
+ 'python312.dll',
+ True,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)

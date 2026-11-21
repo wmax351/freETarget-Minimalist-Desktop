@@ -1,0 +1,2319 @@
+('D:\\Free E '
+ 'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.build\\freETargetDesktop\\PYZ-00.pyz',
+ [('PyInstaller',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\__init__.py',
+   'PYMODULE'),
+  ('PyInstaller._shared_with_waf',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\_shared_with_waf.py',
+   'PYMODULE'),
+  ('PyInstaller.building',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\building\\__init__.py',
+   'PYMODULE'),
+  ('PyInstaller.building.utils',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\building\\utils.py',
+   'PYMODULE'),
+  ('PyInstaller.compat',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\compat.py',
+   'PYMODULE'),
+  ('PyInstaller.config',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\config.py',
+   'PYMODULE'),
+  ('PyInstaller.depend',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\depend\\__init__.py',
+   'PYMODULE'),
+  ('PyInstaller.depend.imphookapi',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\depend\\imphookapi.py',
+   'PYMODULE'),
+  ('PyInstaller.exceptions',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\exceptions.py',
+   'PYMODULE'),
+  ('PyInstaller.isolated',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\isolated\\__init__.py',
+   'PYMODULE'),
+  ('PyInstaller.isolated._parent',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\isolated\\_parent.py',
+   'PYMODULE'),
+  ('PyInstaller.lib',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\lib\\__init__.py',
+   'PYMODULE'),
+  ('PyInstaller.lib.modulegraph',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\lib\\modulegraph\\__init__.py',
+   'PYMODULE'),
+  ('PyInstaller.lib.modulegraph.modulegraph',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\lib\\modulegraph\\modulegraph.py',
+   'PYMODULE'),
+  ('PyInstaller.lib.modulegraph.util',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\lib\\modulegraph\\util.py',
+   'PYMODULE'),
+  ('PyInstaller.log',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\log.py',
+   'PYMODULE'),
+  ('PyInstaller.utils',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\utils\\__init__.py',
+   'PYMODULE'),
+  ('PyInstaller.utils.hooks',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\utils\\hooks\\__init__.py',
+   'PYMODULE'),
+  ('PyInstaller.utils.hooks.conda',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\utils\\hooks\\conda.py',
+   'PYMODULE'),
+  ('PyInstaller.utils.misc',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\utils\\misc.py',
+   'PYMODULE'),
+  ('PyInstaller.utils.osx',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\utils\\osx.py',
+   'PYMODULE'),
+  ('PyInstaller.utils.win32',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\utils\\win32\\__init__.py',
+   'PYMODULE'),
+  ('PyInstaller.utils.win32.versioninfo',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\PyInstaller\\utils\\win32\\versioninfo.py',
+   'PYMODULE'),
+  ('__future__',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\__future__.py',
+   'PYMODULE'),
+  ('_aix_support',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\_aix_support.py',
+   'PYMODULE'),
+  ('_compat_pickle',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\_compat_pickle.py',
+   'PYMODULE'),
+  ('_compression',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\_compression.py',
+   'PYMODULE'),
+  ('_distutils_hack',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py',
+   'PYMODULE'),
+  ('_distutils_hack.override',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\_distutils_hack\\override.py',
+   'PYMODULE'),
+  ('_osx_support',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\_osx_support.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\_py_abc.py',
+   'PYMODULE'),
+  ('_pydatetime',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\_pydatetime.py',
+   'PYMODULE'),
+  ('_pydecimal',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\_pydecimal.py',
+   'PYMODULE'),
+  ('_sitebuiltins',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\_sitebuiltins.py',
+   'PYMODULE'),
+  ('_strptime',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\_strptime.py',
+   'PYMODULE'),
+  ('_threading_local',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\_threading_local.py',
+   'PYMODULE'),
+  ('altgraph',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\altgraph\\__init__.py',
+   'PYMODULE'),
+  ('altgraph.Graph',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\altgraph\\Graph.py',
+   'PYMODULE'),
+  ('altgraph.GraphUtil',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\altgraph\\GraphUtil.py',
+   'PYMODULE'),
+  ('altgraph.ObjectGraph',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\altgraph\\ObjectGraph.py',
+   'PYMODULE'),
+  ('argparse',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\argparse.py',
+   'PYMODULE'),
+  ('ast',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\ast.py',
+   'PYMODULE'),
+  ('asyncio',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\__init__.py',
+   'PYMODULE'),
+  ('asyncio.base_events',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\base_events.py',
+   'PYMODULE'),
+  ('asyncio.base_futures',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\base_futures.py',
+   'PYMODULE'),
+  ('asyncio.base_subprocess',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\base_subprocess.py',
+   'PYMODULE'),
+  ('asyncio.base_tasks',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\base_tasks.py',
+   'PYMODULE'),
+  ('asyncio.constants',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\constants.py',
+   'PYMODULE'),
+  ('asyncio.coroutines',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\coroutines.py',
+   'PYMODULE'),
+  ('asyncio.events',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\events.py',
+   'PYMODULE'),
+  ('asyncio.exceptions',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\exceptions.py',
+   'PYMODULE'),
+  ('asyncio.format_helpers',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\format_helpers.py',
+   'PYMODULE'),
+  ('asyncio.futures',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\futures.py',
+   'PYMODULE'),
+  ('asyncio.locks',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\locks.py',
+   'PYMODULE'),
+  ('asyncio.log',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\log.py',
+   'PYMODULE'),
+  ('asyncio.mixins',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\mixins.py',
+   'PYMODULE'),
+  ('asyncio.proactor_events',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\proactor_events.py',
+   'PYMODULE'),
+  ('asyncio.protocols',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\protocols.py',
+   'PYMODULE'),
+  ('asyncio.queues',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\queues.py',
+   'PYMODULE'),
+  ('asyncio.runners',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py',
+   'PYMODULE'),
+  ('asyncio.selector_events',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\selector_events.py',
+   'PYMODULE'),
+  ('asyncio.sslproto',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\sslproto.py',
+   'PYMODULE'),
+  ('asyncio.staggered',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\staggered.py',
+   'PYMODULE'),
+  ('asyncio.streams',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\streams.py',
+   'PYMODULE'),
+  ('asyncio.subprocess',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\subprocess.py',
+   'PYMODULE'),
+  ('asyncio.taskgroups',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\taskgroups.py',
+   'PYMODULE'),
+  ('asyncio.tasks',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\tasks.py',
+   'PYMODULE'),
+  ('asyncio.threads',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\threads.py',
+   'PYMODULE'),
+  ('asyncio.timeouts',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\timeouts.py',
+   'PYMODULE'),
+  ('asyncio.transports',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\transports.py',
+   'PYMODULE'),
+  ('asyncio.trsock',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\trsock.py',
+   'PYMODULE'),
+  ('asyncio.unix_events',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\unix_events.py',
+   'PYMODULE'),
+  ('asyncio.windows_events',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\windows_events.py',
+   'PYMODULE'),
+  ('asyncio.windows_utils',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\windows_utils.py',
+   'PYMODULE'),
+  ('base64',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\base64.py',
+   'PYMODULE'),
+  ('bisect',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\bisect.py',
+   'PYMODULE'),
+  ('bottle',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\bottle.py',
+   'PYMODULE'),
+  ('bz2',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\bz2.py',
+   'PYMODULE'),
+  ('calendar',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\calendar.py',
+   'PYMODULE'),
+  ('cffi',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\__init__.py',
+   'PYMODULE'),
+  ('cffi._imp_emulation',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\_imp_emulation.py',
+   'PYMODULE'),
+  ('cffi._shimmed_dist_utils',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\_shimmed_dist_utils.py',
+   'PYMODULE'),
+  ('cffi.api',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\api.py',
+   'PYMODULE'),
+  ('cffi.cffi_opcode',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\cffi_opcode.py',
+   'PYMODULE'),
+  ('cffi.commontypes',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\commontypes.py',
+   'PYMODULE'),
+  ('cffi.cparser',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\cparser.py',
+   'PYMODULE'),
+  ('cffi.error',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\error.py',
+   'PYMODULE'),
+  ('cffi.ffiplatform',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\ffiplatform.py',
+   'PYMODULE'),
+  ('cffi.lock',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\lock.py',
+   'PYMODULE'),
+  ('cffi.model',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\model.py',
+   'PYMODULE'),
+  ('cffi.pkgconfig',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\pkgconfig.py',
+   'PYMODULE'),
+  ('cffi.recompiler',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\recompiler.py',
+   'PYMODULE'),
+  ('cffi.vengine_cpy',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\vengine_cpy.py',
+   'PYMODULE'),
+  ('cffi.vengine_gen',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\vengine_gen.py',
+   'PYMODULE'),
+  ('cffi.verifier',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\cffi\\verifier.py',
+   'PYMODULE'),
+  ('clr',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr.py',
+   'PYMODULE'),
+  ('clr_loader',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr_loader\\__init__.py',
+   'PYMODULE'),
+  ('clr_loader.ffi',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr_loader\\ffi\\__init__.py',
+   'PYMODULE'),
+  ('clr_loader.ffi.hostfxr',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr_loader\\ffi\\hostfxr.py',
+   'PYMODULE'),
+  ('clr_loader.ffi.mono',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr_loader\\ffi\\mono.py',
+   'PYMODULE'),
+  ('clr_loader.ffi.netfx',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr_loader\\ffi\\netfx.py',
+   'PYMODULE'),
+  ('clr_loader.hostfxr',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr_loader\\hostfxr.py',
+   'PYMODULE'),
+  ('clr_loader.mono',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr_loader\\mono.py',
+   'PYMODULE'),
+  ('clr_loader.netfx',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr_loader\\netfx.py',
+   'PYMODULE'),
+  ('clr_loader.types',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr_loader\\types.py',
+   'PYMODULE'),
+  ('clr_loader.util',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr_loader\\util\\__init__.py',
+   'PYMODULE'),
+  ('clr_loader.util.clr_error',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr_loader\\util\\clr_error.py',
+   'PYMODULE'),
+  ('clr_loader.util.coreclr_errors',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr_loader\\util\\coreclr_errors.py',
+   'PYMODULE'),
+  ('clr_loader.util.find',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr_loader\\util\\find.py',
+   'PYMODULE'),
+  ('clr_loader.util.hostfxr_errors',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr_loader\\util\\hostfxr_errors.py',
+   'PYMODULE'),
+  ('clr_loader.util.runtime_spec',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\clr_loader\\util\\runtime_spec.py',
+   'PYMODULE'),
+  ('code',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\code.py',
+   'PYMODULE'),
+  ('codeop',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\codeop.py',
+   'PYMODULE'),
+  ('concurrent',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\concurrent\\__init__.py',
+   'PYMODULE'),
+  ('concurrent.futures',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\concurrent\\futures\\__init__.py',
+   'PYMODULE'),
+  ('concurrent.futures._base',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\concurrent\\futures\\_base.py',
+   'PYMODULE'),
+  ('concurrent.futures.process',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\concurrent\\futures\\process.py',
+   'PYMODULE'),
+  ('concurrent.futures.thread',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\concurrent\\futures\\thread.py',
+   'PYMODULE'),
+  ('configparser',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\configparser.py',
+   'PYMODULE'),
+  ('contextlib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\contextlib.py',
+   'PYMODULE'),
+  ('contextvars',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\contextvars.py',
+   'PYMODULE'),
+  ('controller',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\app\\controller.py',
+   'PYMODULE'),
+  ('copy',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\copy.py',
+   'PYMODULE'),
+  ('csv',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\csv.py',
+   'PYMODULE'),
+  ('ctypes',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\ctypes\\__init__.py',
+   'PYMODULE'),
+  ('ctypes._aix',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\ctypes\\_aix.py',
+   'PYMODULE'),
+  ('ctypes._endian',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\ctypes\\_endian.py',
+   'PYMODULE'),
+  ('ctypes.macholib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\ctypes\\macholib\\__init__.py',
+   'PYMODULE'),
+  ('ctypes.macholib.dyld',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\ctypes\\macholib\\dyld.py',
+   'PYMODULE'),
+  ('ctypes.macholib.dylib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\ctypes\\macholib\\dylib.py',
+   'PYMODULE'),
+  ('ctypes.macholib.framework',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\ctypes\\macholib\\framework.py',
+   'PYMODULE'),
+  ('ctypes.util',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\ctypes\\util.py',
+   'PYMODULE'),
+  ('ctypes.wintypes',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\ctypes\\wintypes.py',
+   'PYMODULE'),
+  ('dataclasses',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\dataclasses.py',
+   'PYMODULE'),
+  ('datetime',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\datetime.py',
+   'PYMODULE'),
+  ('decimal',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\decimal.py',
+   'PYMODULE'),
+  ('dis',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\dis.py',
+   'PYMODULE'),
+  ('email',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\__init__.py',
+   'PYMODULE'),
+  ('email._encoded_words',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\_encoded_words.py',
+   'PYMODULE'),
+  ('email._header_value_parser',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\_header_value_parser.py',
+   'PYMODULE'),
+  ('email._parseaddr',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\_parseaddr.py',
+   'PYMODULE'),
+  ('email._policybase',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\_policybase.py',
+   'PYMODULE'),
+  ('email.base64mime',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\base64mime.py',
+   'PYMODULE'),
+  ('email.charset',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\charset.py',
+   'PYMODULE'),
+  ('email.contentmanager',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\contentmanager.py',
+   'PYMODULE'),
+  ('email.encoders',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\encoders.py',
+   'PYMODULE'),
+  ('email.errors',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\errors.py',
+   'PYMODULE'),
+  ('email.feedparser',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\feedparser.py',
+   'PYMODULE'),
+  ('email.generator',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\generator.py',
+   'PYMODULE'),
+  ('email.header',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\header.py',
+   'PYMODULE'),
+  ('email.headerregistry',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\headerregistry.py',
+   'PYMODULE'),
+  ('email.iterators',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\iterators.py',
+   'PYMODULE'),
+  ('email.message',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\message.py',
+   'PYMODULE'),
+  ('email.parser',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\parser.py',
+   'PYMODULE'),
+  ('email.policy',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\policy.py',
+   'PYMODULE'),
+  ('email.quoprimime',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\quoprimime.py',
+   'PYMODULE'),
+  ('email.utils',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\email\\utils.py',
+   'PYMODULE'),
+  ('fnmatch',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\fnmatch.py',
+   'PYMODULE'),
+  ('fractions',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\fractions.py',
+   'PYMODULE'),
+  ('freetarget_bridge',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\app\\freetarget_bridge.py',
+   'PYMODULE'),
+  ('ftplib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\ftplib.py',
+   'PYMODULE'),
+  ('getopt',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\getopt.py',
+   'PYMODULE'),
+  ('getpass',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\getpass.py',
+   'PYMODULE'),
+  ('gettext',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\gettext.py',
+   'PYMODULE'),
+  ('glob',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\glob.py',
+   'PYMODULE'),
+  ('gzip',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\gzip.py',
+   'PYMODULE'),
+  ('hashlib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\hashlib.py',
+   'PYMODULE'),
+  ('hmac',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\hmac.py',
+   'PYMODULE'),
+  ('html',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\html\\__init__.py',
+   'PYMODULE'),
+  ('html.entities',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\html\\entities.py',
+   'PYMODULE'),
+  ('http',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\http\\__init__.py',
+   'PYMODULE'),
+  ('http.client',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\http\\client.py',
+   'PYMODULE'),
+  ('http.cookiejar',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\http\\cookiejar.py',
+   'PYMODULE'),
+  ('http.cookies',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\http\\cookies.py',
+   'PYMODULE'),
+  ('http.server',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\http\\server.py',
+   'PYMODULE'),
+  ('importlib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\__init__.py',
+   'PYMODULE'),
+  ('importlib._abc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\_abc.py',
+   'PYMODULE'),
+  ('importlib._bootstrap',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\_bootstrap.py',
+   'PYMODULE'),
+  ('importlib._bootstrap_external',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\_bootstrap_external.py',
+   'PYMODULE'),
+  ('importlib.abc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\abc.py',
+   'PYMODULE'),
+  ('importlib.machinery',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\machinery.py',
+   'PYMODULE'),
+  ('importlib.metadata',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\metadata\\__init__.py',
+   'PYMODULE'),
+  ('importlib.metadata._adapters',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\metadata\\_adapters.py',
+   'PYMODULE'),
+  ('importlib.metadata._collections',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\metadata\\_collections.py',
+   'PYMODULE'),
+  ('importlib.metadata._functools',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\metadata\\_functools.py',
+   'PYMODULE'),
+  ('importlib.metadata._itertools',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\metadata\\_itertools.py',
+   'PYMODULE'),
+  ('importlib.metadata._meta',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\metadata\\_meta.py',
+   'PYMODULE'),
+  ('importlib.metadata._text',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\metadata\\_text.py',
+   'PYMODULE'),
+  ('importlib.readers',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\readers.py',
+   'PYMODULE'),
+  ('importlib.resources',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\resources\\__init__.py',
+   'PYMODULE'),
+  ('importlib.resources._adapters',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\resources\\_adapters.py',
+   'PYMODULE'),
+  ('importlib.resources._common',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\resources\\_common.py',
+   'PYMODULE'),
+  ('importlib.resources._itertools',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\resources\\_itertools.py',
+   'PYMODULE'),
+  ('importlib.resources._legacy',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\resources\\_legacy.py',
+   'PYMODULE'),
+  ('importlib.resources.abc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\resources\\abc.py',
+   'PYMODULE'),
+  ('importlib.resources.readers',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\resources\\readers.py',
+   'PYMODULE'),
+  ('importlib.util',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\util.py',
+   'PYMODULE'),
+  ('inspect',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\inspect.py',
+   'PYMODULE'),
+  ('ipaddress',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\ipaddress.py',
+   'PYMODULE'),
+  ('json',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\json\\__init__.py',
+   'PYMODULE'),
+  ('json.decoder',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\json\\decoder.py',
+   'PYMODULE'),
+  ('json.encoder',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\json\\encoder.py',
+   'PYMODULE'),
+  ('json.scanner',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\json\\scanner.py',
+   'PYMODULE'),
+  ('logging',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\logging\\__init__.py',
+   'PYMODULE'),
+  ('logging.handlers',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\logging\\handlers.py',
+   'PYMODULE'),
+  ('lzma',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\lzma.py',
+   'PYMODULE'),
+  ('migration_exporter',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\app\\migration_exporter.py',
+   'PYMODULE'),
+  ('mimetypes',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\mimetypes.py',
+   'PYMODULE'),
+  ('multiprocessing',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\__init__.py',
+   'PYMODULE'),
+  ('multiprocessing.connection',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\connection.py',
+   'PYMODULE'),
+  ('multiprocessing.context',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\context.py',
+   'PYMODULE'),
+  ('multiprocessing.dummy',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\dummy\\__init__.py',
+   'PYMODULE'),
+  ('multiprocessing.dummy.connection',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\dummy\\connection.py',
+   'PYMODULE'),
+  ('multiprocessing.forkserver',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\forkserver.py',
+   'PYMODULE'),
+  ('multiprocessing.heap',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\heap.py',
+   'PYMODULE'),
+  ('multiprocessing.managers',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\managers.py',
+   'PYMODULE'),
+  ('multiprocessing.pool',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\pool.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_fork',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\popen_fork.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_forkserver',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\popen_forkserver.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_spawn_posix',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\popen_spawn_posix.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_spawn_win32',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\popen_spawn_win32.py',
+   'PYMODULE'),
+  ('multiprocessing.process',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\process.py',
+   'PYMODULE'),
+  ('multiprocessing.queues',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\queues.py',
+   'PYMODULE'),
+  ('multiprocessing.reduction',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\reduction.py',
+   'PYMODULE'),
+  ('multiprocessing.resource_sharer',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\resource_sharer.py',
+   'PYMODULE'),
+  ('multiprocessing.resource_tracker',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\resource_tracker.py',
+   'PYMODULE'),
+  ('multiprocessing.shared_memory',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\shared_memory.py',
+   'PYMODULE'),
+  ('multiprocessing.sharedctypes',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\sharedctypes.py',
+   'PYMODULE'),
+  ('multiprocessing.spawn',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\spawn.py',
+   'PYMODULE'),
+  ('multiprocessing.synchronize',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\synchronize.py',
+   'PYMODULE'),
+  ('multiprocessing.util',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\multiprocessing\\util.py',
+   'PYMODULE'),
+  ('netrc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\netrc.py',
+   'PYMODULE'),
+  ('nturl2path',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\nturl2path.py',
+   'PYMODULE'),
+  ('numbers',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\numbers.py',
+   'PYMODULE'),
+  ('opcode',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\opcode.py',
+   'PYMODULE'),
+  ('ordlookup',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\ordlookup\\__init__.py',
+   'PYMODULE'),
+  ('ordlookup.oleaut32',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\ordlookup\\oleaut32.py',
+   'PYMODULE'),
+  ('ordlookup.ws2_32',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\ordlookup\\ws2_32.py',
+   'PYMODULE'),
+  ('ordlookup.wsock32',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\ordlookup\\wsock32.py',
+   'PYMODULE'),
+  ('packaging',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('packaging._elffile',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\_elffile.py',
+   'PYMODULE'),
+  ('packaging._manylinux',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\_manylinux.py',
+   'PYMODULE'),
+  ('packaging._musllinux',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\_musllinux.py',
+   'PYMODULE'),
+  ('packaging._parser',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\_parser.py',
+   'PYMODULE'),
+  ('packaging._ranges',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\_ranges.py',
+   'PYMODULE'),
+  ('packaging._tokenizer',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\_tokenizer.py',
+   'PYMODULE'),
+  ('packaging.licenses',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\licenses\\__init__.py',
+   'PYMODULE'),
+  ('packaging.licenses._spdx',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\licenses\\_spdx.py',
+   'PYMODULE'),
+  ('packaging.markers',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\markers.py',
+   'PYMODULE'),
+  ('packaging.ranges',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\ranges.py',
+   'PYMODULE'),
+  ('packaging.requirements',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('packaging.specifiers',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('packaging.tags',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\tags.py',
+   'PYMODULE'),
+  ('packaging.utils',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\utils.py',
+   'PYMODULE'),
+  ('packaging.version',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\packaging\\version.py',
+   'PYMODULE'),
+  ('pathlib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\pathlib.py',
+   'PYMODULE'),
+  ('pefile',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\pefile.py',
+   'PYMODULE'),
+  ('pickle',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\pickle.py',
+   'PYMODULE'),
+  ('pkgutil',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\pkgutil.py',
+   'PYMODULE'),
+  ('platform',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\platform.py',
+   'PYMODULE'),
+  ('platform_support',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\app\\platform_support.py',
+   'PYMODULE'),
+  ('pprint',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\pprint.py',
+   'PYMODULE'),
+  ('proxy_tools',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\proxy_tools\\__init__.py',
+   'PYMODULE'),
+  ('py_compile',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\py_compile.py',
+   'PYMODULE'),
+  ('pycparser',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\pycparser\\__init__.py',
+   'PYMODULE'),
+  ('pycparser.ast_transforms',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\pycparser\\ast_transforms.py',
+   'PYMODULE'),
+  ('pycparser.c_ast',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\pycparser\\c_ast.py',
+   'PYMODULE'),
+  ('pycparser.c_lexer',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\pycparser\\c_lexer.py',
+   'PYMODULE'),
+  ('pycparser.c_parser',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\pycparser\\c_parser.py',
+   'PYMODULE'),
+  ('pydoc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\pydoc.py',
+   'PYMODULE'),
+  ('pydoc_data',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\pydoc_data\\__init__.py',
+   'PYMODULE'),
+  ('pydoc_data.topics',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\pydoc_data\\topics.py',
+   'PYMODULE'),
+  ('pythonnet',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\pythonnet\\__init__.py',
+   'PYMODULE'),
+  ('queue',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\queue.py',
+   'PYMODULE'),
+  ('quopri',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\quopri.py',
+   'PYMODULE'),
+  ('random',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\random.py',
+   'PYMODULE'),
+  ('rlcompleter',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\rlcompleter.py',
+   'PYMODULE'),
+  ('runpy',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\runpy.py',
+   'PYMODULE'),
+  ('secrets',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\secrets.py',
+   'PYMODULE'),
+  ('selectors',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\selectors.py',
+   'PYMODULE'),
+  ('serial',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\serial\\__init__.py',
+   'PYMODULE'),
+  ('serial.serialcli',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\serial\\serialcli.py',
+   'PYMODULE'),
+  ('serial.serialjava',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\serial\\serialjava.py',
+   'PYMODULE'),
+  ('serial.serialposix',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\serial\\serialposix.py',
+   'PYMODULE'),
+  ('serial.serialutil',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\serial\\serialutil.py',
+   'PYMODULE'),
+  ('serial.serialwin32',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\serial\\serialwin32.py',
+   'PYMODULE'),
+  ('serial.tools',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\serial\\tools\\__init__.py',
+   'PYMODULE'),
+  ('serial.tools.list_ports',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\serial\\tools\\list_ports.py',
+   'PYMODULE'),
+  ('serial.tools.list_ports_common',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\serial\\tools\\list_ports_common.py',
+   'PYMODULE'),
+  ('serial.tools.list_ports_linux',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\serial\\tools\\list_ports_linux.py',
+   'PYMODULE'),
+  ('serial.tools.list_ports_osx',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\serial\\tools\\list_ports_osx.py',
+   'PYMODULE'),
+  ('serial.tools.list_ports_posix',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\serial\\tools\\list_ports_posix.py',
+   'PYMODULE'),
+  ('serial.tools.list_ports_windows',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\serial\\tools\\list_ports_windows.py',
+   'PYMODULE'),
+  ('serial.win32',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\serial\\win32.py',
+   'PYMODULE'),
+  ('service',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\app\\service.py',
+   'PYMODULE'),
+  ('setuptools',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._core_metadata',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_core_metadata.py',
+   'PYMODULE'),
+  ('setuptools._discovery',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_discovery.py',
+   'PYMODULE'),
+  ('setuptools._distutils',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._distutils._dataclass',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\_dataclass.py',
+   'PYMODULE'),
+  ('setuptools._distutils._log',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\_log.py',
+   'PYMODULE'),
+  ('setuptools._distutils._modified',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\_modified.py',
+   'PYMODULE'),
+  ('setuptools._distutils._msvccompiler',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\_msvccompiler.py',
+   'PYMODULE'),
+  ('setuptools._distutils.archive_util',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\archive_util.py',
+   'PYMODULE'),
+  ('setuptools._distutils.ccompiler',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\ccompiler.py',
+   'PYMODULE'),
+  ('setuptools._distutils.cmd',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\cmd.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.bdist',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\bdist.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.build',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\build.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.build_ext',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\build_ext.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.sdist',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\sdist.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compat',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compat\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compat.numpy',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compat\\numpy.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compat.py310',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compat\\py310.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compilers', '-', 'PYMODULE'),
+  ('setuptools._distutils.compilers.C', '-', 'PYMODULE'),
+  ('setuptools._distutils.compilers.C.base',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\base.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compilers.C.cygwin',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\cygwin.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compilers.C.errors',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\errors.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compilers.C.msvc',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\msvc.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compilers.C.unix',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\unix.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compilers.C.zos',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\zos.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compilers._modified',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\_modified.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compilers._util',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\_util.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compilers.errors',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\errors.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compilers.logging',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\logging.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compilers.platform', '-', 'PYMODULE'),
+  ('setuptools._distutils.compilers.platform.detect',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\platform\\detect.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compilers.platform.macos',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\platform\\macos.py',
+   'PYMODULE'),
+  ('setuptools._distutils.core',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\core.py',
+   'PYMODULE'),
+  ('setuptools._distutils.debug',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\debug.py',
+   'PYMODULE'),
+  ('setuptools._distutils.dir_util',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\dir_util.py',
+   'PYMODULE'),
+  ('setuptools._distutils.dist',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\dist.py',
+   'PYMODULE'),
+  ('setuptools._distutils.errors',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\errors.py',
+   'PYMODULE'),
+  ('setuptools._distutils.extension',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\extension.py',
+   'PYMODULE'),
+  ('setuptools._distutils.fancy_getopt',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\fancy_getopt.py',
+   'PYMODULE'),
+  ('setuptools._distutils.file_util',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\file_util.py',
+   'PYMODULE'),
+  ('setuptools._distutils.filelist',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\filelist.py',
+   'PYMODULE'),
+  ('setuptools._distutils.log',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\log.py',
+   'PYMODULE'),
+  ('setuptools._distutils.spawn',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\spawn.py',
+   'PYMODULE'),
+  ('setuptools._distutils.sysconfig',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\sysconfig.py',
+   'PYMODULE'),
+  ('setuptools._distutils.text_file',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\text_file.py',
+   'PYMODULE'),
+  ('setuptools._distutils.util',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\util.py',
+   'PYMODULE'),
+  ('setuptools._distutils.version',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\version.py',
+   'PYMODULE'),
+  ('setuptools._distutils.versionpredicate',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\versionpredicate.py',
+   'PYMODULE'),
+  ('setuptools._entry_points',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_entry_points.py',
+   'PYMODULE'),
+  ('setuptools._imp',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_imp.py',
+   'PYMODULE'),
+  ('setuptools._importlib',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_importlib.py',
+   'PYMODULE'),
+  ('setuptools._itertools',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_itertools.py',
+   'PYMODULE'),
+  ('setuptools._normalization',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_normalization.py',
+   'PYMODULE'),
+  ('setuptools._path',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_path.py',
+   'PYMODULE'),
+  ('setuptools._reqs',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_reqs.py',
+   'PYMODULE'),
+  ('setuptools._shutil',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_shutil.py',
+   'PYMODULE'),
+  ('setuptools._static',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_static.py',
+   'PYMODULE'),
+  ('setuptools._vendor', '-', 'PYMODULE'),
+  ('setuptools._vendor.backports',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.backports.tarfile',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\tarfile\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.backports.tarfile.compat',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\tarfile\\compat\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.backports.tarfile.compat.py38',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\tarfile\\compat\\py38.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._adapters',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_adapters.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._collections',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_collections.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._compat',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_compat.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._functools',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_functools.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._itertools',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_itertools.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._meta',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_meta.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._text',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_text.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._typing',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_typing.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata.compat',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\compat\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata.compat.py311',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\compat\\py311.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata.compat.py39',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\compat\\py39.py',
+   'PYMODULE'),
+  ('setuptools._vendor.jaraco', '-', 'PYMODULE'),
+  ('setuptools._vendor.jaraco.context',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\context\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.jaraco.functools',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\functools\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.jaraco.text',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.more_itertools',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.more_itertools.more',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\more.py',
+   'PYMODULE'),
+  ('setuptools._vendor.more_itertools.recipes',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\recipes.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._elffile',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_elffile.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._manylinux',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_manylinux.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._musllinux',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_musllinux.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._parser',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_parser.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._ranges',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_ranges.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._tokenizer',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_tokenizer.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.markers',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\markers.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.ranges',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\ranges.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.requirements',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.specifiers',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.tags',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\tags.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.utils',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\utils.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.version',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\version.py',
+   'PYMODULE'),
+  ('setuptools._vendor.tomli',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.tomli._parser',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_parser.py',
+   'PYMODULE'),
+  ('setuptools._vendor.tomli._re',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_re.py',
+   'PYMODULE'),
+  ('setuptools._vendor.tomli._types',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_types.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.macosx_libfile',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\macosx_libfile.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.wheelfile',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\wheelfile.py',
+   'PYMODULE'),
+  ('setuptools._vendor.zipp',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.zipp._functools',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\_functools.py',
+   'PYMODULE'),
+  ('setuptools._vendor.zipp.compat',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.zipp.compat.overlay',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\overlay.py',
+   'PYMODULE'),
+  ('setuptools._vendor.zipp.compat.py310',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\py310.py',
+   'PYMODULE'),
+  ('setuptools._vendor.zipp.compat.py313',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\py313.py',
+   'PYMODULE'),
+  ('setuptools._vendor.zipp.glob',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\glob.py',
+   'PYMODULE'),
+  ('setuptools.archive_util',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\archive_util.py',
+   'PYMODULE'),
+  ('setuptools.command',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\command\\__init__.py',
+   'PYMODULE'),
+  ('setuptools.command._requirestxt',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\command\\_requirestxt.py',
+   'PYMODULE'),
+  ('setuptools.command.bdist_egg',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\command\\bdist_egg.py',
+   'PYMODULE'),
+  ('setuptools.command.bdist_wheel',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\command\\bdist_wheel.py',
+   'PYMODULE'),
+  ('setuptools.command.build',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\command\\build.py',
+   'PYMODULE'),
+  ('setuptools.command.egg_info',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\command\\egg_info.py',
+   'PYMODULE'),
+  ('setuptools.command.sdist',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\command\\sdist.py',
+   'PYMODULE'),
+  ('setuptools.command.setopt',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\command\\setopt.py',
+   'PYMODULE'),
+  ('setuptools.compat',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\compat\\__init__.py',
+   'PYMODULE'),
+  ('setuptools.compat.py310',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\compat\\py310.py',
+   'PYMODULE'),
+  ('setuptools.compat.py311',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\compat\\py311.py',
+   'PYMODULE'),
+  ('setuptools.compat.py39',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\compat\\py39.py',
+   'PYMODULE'),
+  ('setuptools.config',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\config\\__init__.py',
+   'PYMODULE'),
+  ('setuptools.config._apply_pyprojecttoml',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\config\\_apply_pyprojecttoml.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\__init__.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject.error_reporting',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\error_reporting.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject.extra_validations',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\extra_validations.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject.fastjsonschema_exceptions',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_exceptions.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject.fastjsonschema_validations',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_validations.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject.formats',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\formats.py',
+   'PYMODULE'),
+  ('setuptools.config.expand',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\config\\expand.py',
+   'PYMODULE'),
+  ('setuptools.config.pyprojecttoml',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\config\\pyprojecttoml.py',
+   'PYMODULE'),
+  ('setuptools.config.setupcfg',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\config\\setupcfg.py',
+   'PYMODULE'),
+  ('setuptools.depends',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\depends.py',
+   'PYMODULE'),
+  ('setuptools.discovery',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\discovery.py',
+   'PYMODULE'),
+  ('setuptools.dist',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\dist.py',
+   'PYMODULE'),
+  ('setuptools.errors',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\errors.py',
+   'PYMODULE'),
+  ('setuptools.extension',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\extension.py',
+   'PYMODULE'),
+  ('setuptools.glob',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\glob.py',
+   'PYMODULE'),
+  ('setuptools.installer',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\installer.py',
+   'PYMODULE'),
+  ('setuptools.logging',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\logging.py',
+   'PYMODULE'),
+  ('setuptools.monkey',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\monkey.py',
+   'PYMODULE'),
+  ('setuptools.msvc',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\msvc.py',
+   'PYMODULE'),
+  ('setuptools.unicode_utils',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\unicode_utils.py',
+   'PYMODULE'),
+  ('setuptools.version',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\version.py',
+   'PYMODULE'),
+  ('setuptools.warnings',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\warnings.py',
+   'PYMODULE'),
+  ('setuptools.wheel',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\wheel.py',
+   'PYMODULE'),
+  ('setuptools.windows_support',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\setuptools\\windows_support.py',
+   'PYMODULE'),
+  ('shlex',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\shlex.py',
+   'PYMODULE'),
+  ('shutil',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\shutil.py',
+   'PYMODULE'),
+  ('signal',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\signal.py',
+   'PYMODULE'),
+  ('site',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\site.py',
+   'PYMODULE'),
+  ('smtplib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\smtplib.py',
+   'PYMODULE'),
+  ('socket',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\socket.py',
+   'PYMODULE'),
+  ('socketserver',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\socketserver.py',
+   'PYMODULE'),
+  ('sqlite3',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\sqlite3\\__init__.py',
+   'PYMODULE'),
+  ('sqlite3.__main__',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\sqlite3\\__main__.py',
+   'PYMODULE'),
+  ('sqlite3.dbapi2',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\sqlite3\\dbapi2.py',
+   'PYMODULE'),
+  ('sqlite3.dump',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\sqlite3\\dump.py',
+   'PYMODULE'),
+  ('ssl',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\ssl.py',
+   'PYMODULE'),
+  ('statistics',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\statistics.py',
+   'PYMODULE'),
+  ('storage',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\app\\storage.py',
+   'PYMODULE'),
+  ('string',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\string.py',
+   'PYMODULE'),
+  ('stringprep',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\stringprep.py',
+   'PYMODULE'),
+  ('subprocess',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\subprocess.py',
+   'PYMODULE'),
+  ('sysconfig',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\sysconfig.py',
+   'PYMODULE'),
+  ('tarfile',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\tarfile.py',
+   'PYMODULE'),
+  ('tempfile',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\tempfile.py',
+   'PYMODULE'),
+  ('textwrap',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\textwrap.py',
+   'PYMODULE'),
+  ('threading',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\threading.py',
+   'PYMODULE'),
+  ('token',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\token.py',
+   'PYMODULE'),
+  ('tokenize',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\tokenize.py',
+   'PYMODULE'),
+  ('tomllib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\tomllib\\__init__.py',
+   'PYMODULE'),
+  ('tomllib._parser',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\tomllib\\_parser.py',
+   'PYMODULE'),
+  ('tomllib._re',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\tomllib\\_re.py',
+   'PYMODULE'),
+  ('tomllib._types',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\tomllib\\_types.py',
+   'PYMODULE'),
+  ('tracemalloc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('tty',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\tty.py',
+   'PYMODULE'),
+  ('typing',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\typing.py',
+   'PYMODULE'),
+  ('typing_extensions',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\typing_extensions.py',
+   'PYMODULE'),
+  ('urllib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\__init__.py',
+   'PYMODULE'),
+  ('urllib.error',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\error.py',
+   'PYMODULE'),
+  ('urllib.parse',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\parse.py',
+   'PYMODULE'),
+  ('urllib.request',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\request.py',
+   'PYMODULE'),
+  ('urllib.response',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\response.py',
+   'PYMODULE'),
+  ('uuid',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\uuid.py',
+   'PYMODULE'),
+  ('version',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\app\\version.py',
+   'PYMODULE'),
+  ('webbrowser',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\webbrowser.py',
+   'PYMODULE'),
+  ('webview',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\__init__.py',
+   'PYMODULE'),
+  ('webview.__pyinstaller',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\__pyinstaller\\__init__.py',
+   'PYMODULE'),
+  ('webview.__pyinstaller.hook-webview',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\__pyinstaller\\hook-webview.py',
+   'PYMODULE'),
+  ('webview._version',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\_version.py',
+   'PYMODULE'),
+  ('webview.dom',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\dom\\__init__.py',
+   'PYMODULE'),
+  ('webview.dom.classlist',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\dom\\classlist.py',
+   'PYMODULE'),
+  ('webview.dom.dom',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\dom\\dom.py',
+   'PYMODULE'),
+  ('webview.dom.element',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\dom\\element.py',
+   'PYMODULE'),
+  ('webview.dom.event',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\dom\\event.py',
+   'PYMODULE'),
+  ('webview.dom.propsdict',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\dom\\propsdict.py',
+   'PYMODULE'),
+  ('webview.errors',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\errors.py',
+   'PYMODULE'),
+  ('webview.event',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\event.py',
+   'PYMODULE'),
+  ('webview.guilib',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\guilib.py',
+   'PYMODULE'),
+  ('webview.http',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\http.py',
+   'PYMODULE'),
+  ('webview.localization',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\localization.py',
+   'PYMODULE'),
+  ('webview.menu',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\menu.py',
+   'PYMODULE'),
+  ('webview.models',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\models.py',
+   'PYMODULE'),
+  ('webview.platforms',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\__init__.py',
+   'PYMODULE'),
+  ('webview.platforms.android',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\android\\__init__.py',
+   'PYMODULE'),
+  ('webview.platforms.android.app',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\android\\app.py',
+   'PYMODULE'),
+  ('webview.platforms.android.base',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\android\\base.py',
+   'PYMODULE'),
+  ('webview.platforms.android.event',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\android\\event.py',
+   'PYMODULE'),
+  ('webview.platforms.android.jclass',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\android\\jclass\\__init__.py',
+   'PYMODULE'),
+  ('webview.platforms.android.jclass.app',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\android\\jclass\\app.py',
+   'PYMODULE'),
+  ('webview.platforms.android.jclass.content',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\android\\jclass\\content.py',
+   'PYMODULE'),
+  ('webview.platforms.android.jclass.net',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\android\\jclass\\net.py',
+   'PYMODULE'),
+  ('webview.platforms.android.jclass.os',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\android\\jclass\\os.py',
+   'PYMODULE'),
+  ('webview.platforms.android.jclass.view',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\android\\jclass\\view.py',
+   'PYMODULE'),
+  ('webview.platforms.android.jclass.webkit',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\android\\jclass\\webkit.py',
+   'PYMODULE'),
+  ('webview.platforms.android.jinterface',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\android\\jinterface\\__init__.py',
+   'PYMODULE'),
+  ('webview.platforms.android.jinterface.pywebview',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\android\\jinterface\\pywebview.py',
+   'PYMODULE'),
+  ('webview.platforms.android.jinterface.view',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\android\\jinterface\\view.py',
+   'PYMODULE'),
+  ('webview.platforms.android.jinterface.webkit',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\android\\jinterface\\webkit.py',
+   'PYMODULE'),
+  ('webview.platforms.cef',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\cef.py',
+   'PYMODULE'),
+  ('webview.platforms.cocoa',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\cocoa.py',
+   'PYMODULE'),
+  ('webview.platforms.edgechromium',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\edgechromium.py',
+   'PYMODULE'),
+  ('webview.platforms.gtk',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\gtk.py',
+   'PYMODULE'),
+  ('webview.platforms.mshtml',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\mshtml.py',
+   'PYMODULE'),
+  ('webview.platforms.qt',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\qt.py',
+   'PYMODULE'),
+  ('webview.platforms.win32',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\win32.py',
+   'PYMODULE'),
+  ('webview.platforms.winforms',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\platforms\\winforms.py',
+   'PYMODULE'),
+  ('webview.screen',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\screen.py',
+   'PYMODULE'),
+  ('webview.state',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\state.py',
+   'PYMODULE'),
+  ('webview.util',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\util.py',
+   'PYMODULE'),
+  ('webview.window',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\webview\\window.py',
+   'PYMODULE'),
+  ('win32ctypes',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\__init__.py',
+   'PYMODULE'),
+  ('win32ctypes.core',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\__init__.py',
+   'PYMODULE'),
+  ('win32ctypes.core._winerrors',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\_winerrors.py',
+   'PYMODULE'),
+  ('win32ctypes.core.cffi',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\cffi\\__init__.py',
+   'PYMODULE'),
+  ('win32ctypes.core.cffi._authentication',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\cffi\\_authentication.py',
+   'PYMODULE'),
+  ('win32ctypes.core.cffi._common',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\cffi\\_common.py',
+   'PYMODULE'),
+  ('win32ctypes.core.cffi._dll',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\cffi\\_dll.py',
+   'PYMODULE'),
+  ('win32ctypes.core.cffi._nl_support',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\cffi\\_nl_support.py',
+   'PYMODULE'),
+  ('win32ctypes.core.cffi._resource',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\cffi\\_resource.py',
+   'PYMODULE'),
+  ('win32ctypes.core.cffi._system_information',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\cffi\\_system_information.py',
+   'PYMODULE'),
+  ('win32ctypes.core.cffi._time',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\cffi\\_time.py',
+   'PYMODULE'),
+  ('win32ctypes.core.cffi._util',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\cffi\\_util.py',
+   'PYMODULE'),
+  ('win32ctypes.core.compat',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\compat.py',
+   'PYMODULE'),
+  ('win32ctypes.core.ctypes',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\ctypes\\__init__.py',
+   'PYMODULE'),
+  ('win32ctypes.core.ctypes._authentication',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\ctypes\\_authentication.py',
+   'PYMODULE'),
+  ('win32ctypes.core.ctypes._common',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\ctypes\\_common.py',
+   'PYMODULE'),
+  ('win32ctypes.core.ctypes._dll',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\ctypes\\_dll.py',
+   'PYMODULE'),
+  ('win32ctypes.core.ctypes._nl_support',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\ctypes\\_nl_support.py',
+   'PYMODULE'),
+  ('win32ctypes.core.ctypes._resource',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\ctypes\\_resource.py',
+   'PYMODULE'),
+  ('win32ctypes.core.ctypes._system_information',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\ctypes\\_system_information.py',
+   'PYMODULE'),
+  ('win32ctypes.core.ctypes._time',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\ctypes\\_time.py',
+   'PYMODULE'),
+  ('win32ctypes.core.ctypes._util',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\core\\ctypes\\_util.py',
+   'PYMODULE'),
+  ('win32ctypes.pywin32',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\pywin32\\__init__.py',
+   'PYMODULE'),
+  ('win32ctypes.pywin32.pywintypes',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\pywin32\\pywintypes.py',
+   'PYMODULE'),
+  ('win32ctypes.pywin32.win32api',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\pywin32\\win32api.py',
+   'PYMODULE'),
+  ('win32ctypes.pywin32.win32cred',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\pywin32\\win32cred.py',
+   'PYMODULE'),
+  ('win32ctypes.version',
+   'D:\\Free E '
+   'Target\\freETarget-Minimalist-Desktop\\desktop\\windows\\.venv\\Lib\\site-packages\\win32ctypes\\version.py',
+   'PYMODULE'),
+  ('wsgiref',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\wsgiref\\__init__.py',
+   'PYMODULE'),
+  ('wsgiref.handlers',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\wsgiref\\handlers.py',
+   'PYMODULE'),
+  ('wsgiref.headers',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\wsgiref\\headers.py',
+   'PYMODULE'),
+  ('wsgiref.simple_server',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\wsgiref\\simple_server.py',
+   'PYMODULE'),
+  ('wsgiref.types',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\wsgiref\\types.py',
+   'PYMODULE'),
+  ('wsgiref.util',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\wsgiref\\util.py',
+   'PYMODULE'),
+  ('xml',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xml\\__init__.py',
+   'PYMODULE'),
+  ('xml.etree',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xml\\etree\\__init__.py',
+   'PYMODULE'),
+  ('xml.etree.ElementInclude',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xml\\etree\\ElementInclude.py',
+   'PYMODULE'),
+  ('xml.etree.ElementPath',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xml\\etree\\ElementPath.py',
+   'PYMODULE'),
+  ('xml.etree.ElementTree',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xml\\etree\\ElementTree.py',
+   'PYMODULE'),
+  ('xml.etree.cElementTree',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xml\\etree\\cElementTree.py',
+   'PYMODULE'),
+  ('xml.parsers',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xml\\parsers\\__init__.py',
+   'PYMODULE'),
+  ('xml.parsers.expat',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xml\\parsers\\expat.py',
+   'PYMODULE'),
+  ('xml.sax',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xml\\sax\\__init__.py',
+   'PYMODULE'),
+  ('xml.sax._exceptions',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xml\\sax\\_exceptions.py',
+   'PYMODULE'),
+  ('xml.sax.expatreader',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xml\\sax\\expatreader.py',
+   'PYMODULE'),
+  ('xml.sax.handler',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xml\\sax\\handler.py',
+   'PYMODULE'),
+  ('xml.sax.saxutils',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xml\\sax\\saxutils.py',
+   'PYMODULE'),
+  ('xml.sax.xmlreader',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xml\\sax\\xmlreader.py',
+   'PYMODULE'),
+  ('xmlrpc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xmlrpc\\__init__.py',
+   'PYMODULE'),
+  ('xmlrpc.client',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\xmlrpc\\client.py',
+   'PYMODULE'),
+  ('zipfile',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\zipfile\\__init__.py',
+   'PYMODULE'),
+  ('zipfile._path',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\zipfile\\_path\\__init__.py',
+   'PYMODULE'),
+  ('zipfile._path.glob',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\zipfile\\_path\\glob.py',
+   'PYMODULE'),
+  ('zipimport',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\zipimport.py',
+   'PYMODULE')])

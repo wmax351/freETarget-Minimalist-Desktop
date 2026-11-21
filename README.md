@@ -73,6 +73,7 @@ The Android APK has been **tested successfully in an Android emulator** by the p
 ## Application features
 
 - Live target display, shot scores, and recent-shot direction indicators.
+- Shot-density heatmaps for live targets, saved-session reviews, and filtered statistics. Add the live Heatmap widget through **Edit Widgets**, or enable the target overlay. The overlays show the displayed series; the live widget shows all record shots (or all sighting shots during sighting). History also offers a whole-session heatmap; Statistics uses its current filters. **Heatmap settings** adjusts resolution and hotspot peakiness across all views. Colors are relative to each view; misses and synthetic shots are excluded.
 - Editable dashboard widgets, customizable appearance, and optional spoken scores.
 - Shooter profiles with multiple guns and session tracking by gun.
 - Saved sessions, statistics, and performance comparisons.

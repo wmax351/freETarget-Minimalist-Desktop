@@ -55,7 +55,7 @@ def main():
         (fixtures / 'check179.js').write_text(script, encoding='utf-8')
         (fixtures / 'cue-data179.js').write_text('const FIVE_CUES=' + cues + ';', encoding='utf-8')
         env = {**os.environ, 'FT_TEST_FIXTURES': folder}
-        for name in ('test_ui.cjs', 'test_five.cjs', 'test_stats.cjs', 'test_bootstrap.cjs', 'test_exporter.cjs'):
+        for name in ('test_ui.cjs', 'test_five.cjs', 'test_stats.cjs', 'test_heatmap.cjs', 'test_bootstrap.cjs', 'test_exporter.cjs'):
             subprocess.run([node, str(ROOT / 'tests' / name)], env=env, cwd=ROOT, check=True)
         values = json.loads((fixtures / 'storage179.json').read_text(encoding='utf-8'))
         validate_storage(values)

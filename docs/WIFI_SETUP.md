@@ -2,6 +2,8 @@
 
 This guide applies to **freETarget Minimalist for Windows, macOS, and Android** when connecting to a compatible freETarget target over **Wi-Fi / TCP**. The network details below describe the **Arduino Mega 2560 + ESP-01 firmware included in this repository**. Other firmware versions may use different network names, addresses, or configuration methods.
 
+The **Windows and macOS desktop source** also supports the regular freETarget **ESP32 firmware 6.4.2** over TCP. That firmware uses the same AP address (`192.168.10.9`) and TCP port (`1090`), and the desktop app understands its shot packets and settings response. Android compatibility with the 6.4.2 packet format has not been verified.
+
 ## Choose a connection mode
 
 | | Access Point (AP) Mode | Station (STA) Mode |
@@ -13,6 +15,17 @@ This guide applies to **freETarget Minimalist for Windows, macOS, and Android** 
 | TCP port | **`1090`** | **`1090`** |
 
 **Important:** Choosing **Access Point** or **Station** in the freETarget Minimalist *app* only selects how the app connects. It **does not reconfigure the target**. The target's firmware Wi-Fi settings must already match the selected mode.
+
+## Regular freETarget ESP32 firmware 6.4.2
+
+For the regular ESP32 target, the desktop app uses the same TCP endpoint as the included Minimalist firmware:
+
+- **Access Point mode:** connect your computer to the target's `FET-<target name>` Wi-Fi network and select **Access Point Mode** in the app. The target listens at **`192.168.10.9:1090`**.
+- **Station mode:** connect the target and computer to the same network, select **Station Mode**, and enter the target's current IP address with port **`1090`**.
+
+The app's **Get Settings** action sends the firmware's `ECHO` request. Target-side Wi-Fi settings still need to be configured on the target; selecting a mode in the app does not change them. The updated response handling is based on the 6.4.2 source and a captured target log; it still needs to be retested against a physical target.
+
+If an ECHO response omits or corrupts a setting, the target settings window lists it as unavailable instead of guessing its value. Motor controls remain disabled until all motor settings are present; other available settings can still be edited and verified.
 
 ## Access Point Mode — connect directly to the target
 

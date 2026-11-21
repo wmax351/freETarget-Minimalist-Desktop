@@ -1,0 +1,118 @@
+
+[status] Wi-Fi/TCP connected · 192.168.1.231:1090
+{{{{{"shot":1, "session_type":1, "time":920795, "time_to_go":0, "x":-13.32, "y":-25.75, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":2, "session_type":1, "time":949093, "time_to_go":0, "x":-1.79, "y":-20.74, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{"CONNECTED":1451s, "NAME":"FET-TARGET"}
+I (1451.297) Socket accepted ip address: 192.168.1.204
+
+[parse_error] {"CONNECTED":1451s, "NAME":"FET-TARGET"}
+{"KEEP_ALIVE":11, "NAME":"FET-TARGET"}{{{{{"shot":3, "session_type":1, "time":1491353, "time_to_go":0, "x":3.64, "y":0.20, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":4, "session_type":1, "time":1511924, "time_to_go":0, "x":8.75, "y":-32.87, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":5, "session_type":1, "time":1532348, "time_to_go":0, "x":-24.55, "y":-15.02, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":6, "session_type":1, "time":1557949, "time_to_go":0, "x":-9.79, "y":-1.24, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{"KEEP_ALIVE":12, "NAME":"FET-TARGET"}{{{{{"shot":7, "session_type":1, "time":1578675, "time_to_go":0, "x":-9.72, "y":-30.57, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":8, "session_type":1, "time":1601195, "time_to_go":0, "x":-16.85, "y":-17.65, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":9, "session_type":1, "time":1628501, "time_to_go":0, "x":3.67, "y":15.45, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":10, "session_type":1, "time":1657709, "time_to_go":0, "x":8.10, "y":-3.49, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":11, "session_type":1, "time":1682473, "time_to_go":0, "x":4.49, "y":-10.40, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{"KEEP_ALIVE":13, "NAME":"FET-TARGET"}{{{{{"shot":12, "session_type":1, "time":1714778, "time_to_go":0, "x":-28.55, "y":-8.56, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}
+TX [TCP] {"ECHO":0}
+{"ECHO":0}
+{
+"NAME":              "FET-TARGET",
+"AUX_MODE":        8,                             "FOLLOW_THROUGH":  0, 
+"KEEP_ALIVE":      120,                           "LED_BRIGHT":      50, 
+"MFS_TAP_1":       "(3) - PAPER SHOT",            "MFS_TAP_2":       "(0) - TARGET_ON", 
+"MFS_HOLD_1":      "(1) - PAPER FEED",            "MFS_HOLD_2":      "(5) - TARGET OFF", 
+
+"MFS_HOLD_12":     "(2) - LED_ADJUST",            "MFS_HOLD_C":      "(18) - RAPID RED", 
+"MFS_HOLD_D":      "(20) - RAPID GREEN",          "MFS_SELECT_CD":   "(24) - RAPID HIGH", 
+"MIN_RING_TIME":   500,                           "NAME_ID":         0, 
+"NAME_TEXT":       "",                            "OTA_URL":         "http://targetbin.app/OTA", 
+
+"PAPER_ECO":       0,                             "PAPER_SHOT":      0, 
+"PAPER_TIME":      500,                           "PCNT_LATENCY":    0, 
+"POWER_SAVE":      0,                             "RAPID_COUNT":     0, 
+"RAPID_ENABLE":    0,                             "RAPID_TIME":        0.00, 
+
+"RAPID_WAIT":        0.00,                        "REMOTE_ACTIVE":   0, 
+"REMOTE_KEY":      "",                            "REMOTE_URL":      "", 
+"SEND_MISS":       0,                             "SENSOR":          232.00, 
+"SN":              795,                           "SESSION":         0, 
+
+"STEP_COUNT":      0,                             "STEP_RE_TO_SLEEP":     0.00,                        "TEMPERATURE":       20.31,
+
+"RELATIVE_HUMIDITY": 40.00,                       "TIMER_COUNT":       7030,
+"V12":               11.62,                       "VREF_LO":           1.26,
+"VBOARD_REV":        1.44,                        "WiFi_MAC":          "30:ED:A0:19:E1:A0",
+"WiFi_IP_ADDRESS":   "192.168.1.231",             "WiFi_MODE":         "Connected to Bill Wi the Science Fi",
+
+"TOKEN_RING":       0,                            "DIP":              "--CD"
+"VERSION":          "6.4.2 July 19, 2026",        "OTA BUILD":        60301, 
+"LOCKED":            "No"                         "PS_VERSION":        17,
+"BD_REV":            6.0.0                        "SPLINE FIT":        "Yes",
+
+}
+{"KEEP_ALIVE
+[parse_error] {
+"NAME":              "FET-TARGET",
+"AUX_MODE":        8,                             "FOLLOW_THROUGH":  0, 
+"KEEP_ALIVE":      120,                           "LED_BRIGHT":      50, 
+"MFS_TAP_1":       "(3) - PAPER SHOT",            "MFS_TAP_2":       "(0) - TARGET_ON", 
+"MFS_HOLD_1":      "(1) - PAPER FEED",            "MFS_HOLD_2":      "(5) - TARGET OFF", 
+
+"MFS_HOLD_12":     "(2) - LED_ADJUST",            "MFS_HOLD_C":      "(18) - RAPID RED", 
+"MFS_HOLD_D":      "(20) - RAPID GREEN",          "MFS_SELECT_CD":   "(24) - RAPID HIGH", 
+"MIN_RING_TIME":   500,                           "NAME_ID":         0, 
+"NAME_TEXT":       "",                            "OTA_URL":         "http://targetbin.app/OTA", 
+
+"PAPER_ECO":       0,                             "PAPER_SHOT":      0, 
+"PAPER_TIME":      500,                           "PCNT_LATENCY":    0, 
+"POWER_SAVE":      0,                             "RAPID_COUNT":     0, 
+"RAPID_ENABLE":    0,                            
+":14, "NAME":"FET-TARGET"}
+TX [TCP] {"PAPER_TIME":250}
+{"PAPER_TIME":250}{"KEEP_ALIVE":15, "NAME":"FET-TARGET"}{"KEEP_ALIVE":16, "NAME":"FET-TARGET"}{"KEEP_ALIVE":17, "NAME":"FET-TARGET"}{{{{{"shot":13, "session_type":1, "time":2173926, "time_to_go":0, "x":-1.27, "y":3.52, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":14, "session_type":1, "time":2199234, "time_to_go":0, "x":8.29, "y":-13.55, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":15, "session_type":1, "time":2255545, "time_to_go":0, "x":-9.53, "y":-12.10, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":16, "session_type":1, "time":2282904, "time_to_go":0, "x":-3.43, "y":0.19, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{"KEEP_ALIVE":18, "NAME":"FET-TARGET"}{{{{{"shot":17, "session_type":1, "time":2303442, "time_to_go":0, "x":-6.82, "y":-16.74, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":18, "session_type":1, "time":2326316, "time_to_go":0, "x":-6.11, "y":-17.25, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":19, "session_type":1, "time":2362620, "time_to_go":0, "x":-0.44, "y":-4.54, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":20, "session_type":1, "time":2387193, "time_to_go":0, "x":14.11, "y":-4.65, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":21, "session_type":1, "time":2410953, "time_to_go":0, "x":-30.59, "y":8.01, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{"KEEP_ALIVE":19, "NAME":"FET-TARGET"}{{{{{"shot":22, "session_type":1, "time":2433962, "time_to_go":0, "x":3.96, "y":-8.67, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{{{{{"shot":23, "session_type":1, "time":2455889, "time_to_go":0, "x":-18.13, "y":-5.37, "athelete":"Max Witt", "event":"Tesro Practice", "target_name":"freETarget.targets.AirPistol"}{"KEEP_ALIVE":20, "NAME":"FET-TARGET"}{"KEEP_ALIVE":21, "NAME":"FET-TARGET"}{"KEEP_ALIVE":22, "NAME":"FET-TARGET"}{"KEEP_ALIVE":23, "NAME":"FET-TARGET"}{"KEEP_ALIVE":24, "NAME":"FET-TARGET"}{"KEEP_ALIVE":25, "NAME":"FET-TARGET"}{"KEEP_ALIVE":26, "NAME":"FET-TARGET"}{"KEEP_ALIVE":27, "NAME":"FET-TARGET"}
+TX [TCP] {"ECHO":0}
+{"ECHO":0}
+{
+"NAME":              "FET-TARGET",
+"AUX_MODE":        8,                             "FOLLOW_THROUGH":  0, 
+"KEEP_ALIVE":      120,                           "LED_BRIGHT":      50, 
+"MFS_TAP_1":       "(3) - PAPER SHOT",            "MFS_TAP_2":       "(0) - TARGET_ON", 
+"MFS_HOLD_1":      "(1) - PAPER FEED",            "MFS_HOLD_2":      "(5) - TARGET OFF", 
+
+"MFS_HOLD_12":     "(2) - LED_ADJUST",            "MFS_HOLD_C":      "(18) - RAPID RED", 
+"MFS_HOLD_D":      "(20) - RAPID GREEN",          "MFS_SELECT_CD":   "(24) - RAPID HIGH", 
+"MIN_RING_TIME":   500,                           "NAME_ID":         0, 
+"NAME_TEXT":       "",                            "OTA_URL":         "http://targetbin.app/OTA", 
+
+"PAPER_ECO":       0,                             "PAPER_SHOT":      0, 
+"PAPER_TIME":      250,                           "PCNT_LATENCY":    0, 
+"POWER_SAVE":      0,                             "RAPID_COUNT":     0, 
+"RAPID_ENABLE":    0,                             "RAPID_TIME":        0.00, 
+
+"RAPID_WAIT":        0.00,                        "REMOTE_ACTIVE":   0, 
+"REMOTE_KEY":      "",                            "REMOTE_URL":      "", 
+"SEND_MISS":       0,                             "SENSOR":          232.00, 
+"SN":              795,                           "SESSION":         0, 
+
+"STEP_COUNT":      0,                             "STEP_RE_TO_SLEEP":     0.00,                        "TEMPERATURE":       20.31,
+
+"RELATIVE_HUMIDITY": 40.00,                       "TIMER_COUNT":       7030,
+"V12":               11.64,                       "VREF_LO":           1.26,
+"VBOARD_REV":        1.44,                        "WiFi_MAC":          "30:ED:A0:19:E1:A0",
+"WiFi_IP_ADDRESS":   "192.168.1.231",             "WiFi_MODE":         "Connected to Bill Wi the Science Fi",
+
+"TOKEN_RING":       0,                            "DIP":              "--CD"
+"VERSION":          "6.4.2 July 19, 2026",        "OTA BUILD":        60301, 
+"LOCKED":            "No"                         "PS_VERSION":        17,
+"BD_REV":            6.0.0                        "SPLINE FIT":        "Yes",
+
+}
+
+[parse_error] {
+"NAME":              "FET-TARGET",
+"AUX_MODE":        8,                             "FOLLOW_THROUGH":  0, 
+"KEEP_ALIVE":      120,                           "LED_BRIGHT":      50, 
+"MFS_TAP_1":       "(3) - PAPER SHOT",            "MFS_TAP_2":       "(0) - TARGET_ON", 
+"MFS_HOLD_1":      "(1) - PAPER FEED",            "MFS_HOLD_2":      "(5) - TARGET OFF", 
+
+"MFS_HOLD_12":     "(2) - LED_ADJUST",            "MFS_HOLD_C":      "(18) - RAPID RED", 
+"MFS_HOLD_D":      "(20) - RAPID GREEN",          "MFS_SELECT_CD":   "(24) - RAPID HIGH", 
+"MIN_RING_TIME":   500,                           "NAME_ID":         0, 
+"NAME_TEXT":       "",                            "OTA_URL":         "http://targetbin.app/OTA", 
+
+"PAPER_ECO":       0,                             "PAPER_SHOT":      0, 
+"PAPER_TIME":      250,                           "PCNT_LATENCY":    0, 
+"POWER_SAVE":      0,                             "RAPID_COUNT":     0, 
+"RAPID_ENABLE":    0,                            
