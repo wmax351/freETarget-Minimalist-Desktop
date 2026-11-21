@@ -39,6 +39,42 @@ for (const file of files) {
   assert.match(note.textContent, /Selected sessions · 2 valid hits/, file);
   const density = context.heatmapDensity;
   const valid = {x: 0, y: 0};
+  const recentShots = [{x: -30, y: 0}, {x: 20, y: 0}, {x: 0, y: 0, miss: true}, {x: 0, y: 0, timeout: true}];
+  assert.deepEqual(Array.from(context.liveHeatmapShots(recentShots, 2)), recentShots.slice(1, 3), file);
+  assert.deepEqual(Array.from(context.liveHeatmapShots(recentShots, null)), recentShots.slice(0, 3), file);
+  assert.equal(density(context.liveHeatmapShots(recentShots, 1), 160).hits, 0, file);
+  assert.equal(context.liveHeatmapShots([], 100).length, 0, file);
+  const wrapperStart = html.indexOf('drawTarget=function(svg,data,focus,level,discipline){');
+  const wrapperEnd = html.indexOf(' const originalWidgets=', wrapperStart);
+  assert.ok(wrapperStart >= 0 && wrapperEnd > wrapperStart, file);
+  let overlay;
+  Object.assign(context, {
+    originalDrawTarget: () => {},
+    paintHeatmap: (_svg, data) => { overlay = Array.from(data); },
+    $: id => id === 'discipline' ? {value: 'pistol'} : {checked: true},
+    isFiveLive: () => false,
+    currentStage: () => ({kind: 'record'}),
+    targetSeriesSize: () => 10,
+    runtime: null,
+    shots: recentShots,
+    sightingShots: [{x: 40, y: 0}],
+    scorecardFocusSeries: null,
+    reviewingHistory: false,
+    heatmapLookback: 2
+  });
+  vm.runInContext(html.slice(wrapperStart, wrapperEnd), context);
+  context.drawTarget({id: 'targetSvg'}, [], -1, 1);
+  assert.deepEqual(overlay, recentShots.slice(1, 3), file);
+  context.reviewingHistory = true;
+  context.drawTarget({id: 'targetSvg'}, [valid], -1, 1);
+  assert.deepEqual(overlay, [valid], file);
+  context.reviewingHistory = false;
+  context.runtime = {};
+  context.currentStage = () => ({kind: 'sighting'});
+  context.drawTarget({id: 'targetSvg'}, [], -1, 1);
+  assert.deepEqual(overlay, [{x: 40, y: 0}], file);
+  context.drawTarget({id: 'savedReviewTarget'}, [valid], -1, 1);
+  assert.deepEqual(overlay, [valid], file);
   const invalid = [
     {x: 0, y: 0, miss: true}, {x: 0, y: 0, miss: '1'},
     {x: 0, y: 0, timeout: true}, {x: 0, y: 0, skipped: true},

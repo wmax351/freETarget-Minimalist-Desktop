@@ -2621,12 +2621,16 @@ function updateDashboardWidgetClock(){if(typeof document.querySelector!=='functi
 for(const [lang,label] of Object.entries({"es":"Sesiones seleccionadas","de":"Ausgewählte Sitzungen","fr":"Sessions sélectionnées","it":"Sessioni selezionate","pt":"Sessões selecionadas","hi":"चयनित सत्र","zh-CN":"已选场次","zh-TW":"已選場次","ja":"選択したセッション"}))FT_TRANSLATIONS[lang]['Selected Sessions']=label;
 const HEATMAP_SPEC={id:'heatmap',name:'Heatmap',sizes:['small','large'],defaultSize:'large',visible:false};
 DASHBOARD_WIDGETS.push(HEATMAP_SPEC);
-let heatmapResolution=50,heatmapPeakiness=3,heatmapSettingsError='';
+let heatmapResolution=50,heatmapPeakiness=3,heatmapLookback=10,heatmapSettingsError='';
 try{
  const saved=appStorage.getItem('ft-heatmap-settings-v1');
- if(saved!==null){const settings=JSON.parse(saved);if(!settings||!Number.isInteger(settings.resolution)||settings.resolution<25||settings.resolution>100||settings.resolution%5||!Number.isInteger(settings.peakiness)||settings.peakiness<1||settings.peakiness>5)throw Error('Invalid saved heatmap settings');heatmapResolution=settings.resolution;heatmapPeakiness=settings.peakiness}
+ if(saved!==null){const settings=JSON.parse(saved);if(!settings||!Number.isInteger(settings.resolution)||settings.resolution<25||settings.resolution>100||settings.resolution%5||!Number.isInteger(settings.peakiness)||settings.peakiness<1||settings.peakiness>5||(settings.lookback!==undefined&&settings.lookback!==null&&(!Number.isInteger(settings.lookback)||settings.lookback<1||settings.lookback>100)))throw Error('Invalid saved heatmap settings');heatmapResolution=settings.resolution;heatmapPeakiness=settings.peakiness;if(settings.lookback!==undefined)heatmapLookback=settings.lookback}
 }catch(error){heatmapSettingsError='Could not load heatmap settings: '+error.message}
 function heatmapHits(data){return data.filter(s=>s&&finiteNumber(s.x)&&finiteNumber(s.y)&&![true,1,'1'].includes(s.miss)&&!s.timeout&&!s.skipped&&!['timeout','stage-advance'].includes(s.source))}
+function liveHeatmapShots(data,lookback){
+ const recorded=data.filter(s=>s&&!s.timeout&&!s.skipped&&!['timeout','stage-advance'].includes(s.source));
+ return lookback===null?recorded:recorded.slice(-lookback);
+}
 function heatmapDensity(data,outerRing,side=heatmapResolution,peakiness=heatmapPeakiness){
  const hits=heatmapHits(data),step=400/side,sigma=26-4*peakiness,reach=3*sigma,values=new Float64Array(side*side);
  for(const hit of hits){
@@ -2661,7 +2665,7 @@ function initHeatmaps(){
  if(typeof document.querySelector!=='function'||!$('dashboardWidgets'))return;
  const grid=$('dashboardWidgets'),panel=createWidgetPanel('heatmap','Heatmap','<div id="liveHeatmapFrame" style="position:relative;width:100%;max-width:400px;margin:auto"><svg id="liveHeatmap" viewBox="0 0 400 400" role="img" aria-label="Session shot density target" style="display:block;width:100%"></svg></div>');
  grid.append(panel);applyDashboardLayout();
- const liveControl=document.createElement('label');liveControl.className='checkLabel';liveControl.title='Heatmap of the shots on the displayed target';liveControl.style.cssText='pointer-events:auto;background:var(--paper);padding:5px';liveControl.innerHTML='<input id="liveHeatmapOverlay" type="checkbox"> Heatmap';
+ const liveControl=document.createElement('label');liveControl.className='checkLabel';liveControl.title='Heatmap of recent shots in the current session';liveControl.style.cssText='pointer-events:auto;background:var(--paper);padding:5px';liveControl.innerHTML='<input id="liveHeatmapOverlay" type="checkbox"> Heatmap';
  document.querySelector('.targetHead .controls').prepend(liveControl);$('liveHeatmapOverlay').onchange=()=>renderTarget();
  const historyControl=document.createElement('label');historyControl.className='checkLabel';historyControl.title='Heatmap of the displayed series';historyControl.innerHTML='<input id="historyHeatmapOverlay" type="checkbox"> Heatmap overlay';
  document.querySelector('.historyTargetHeading').append(historyControl);$('historyHeatmapOverlay').onchange=()=>renderSavedReview();
@@ -2669,10 +2673,10 @@ function initHeatmaps(){
  $('savedReviewMeta').before(historyPanel);
  const statsPanel=document.createElement('details');statsPanel.className='statsDetails';statsPanel.open=true;statsPanel.innerHTML='<summary>Selected sessions heatmap</summary><svg id="statisticsHeatmap" viewBox="0 0 400 400" role="img" aria-label="Selected sessions shot density target" style="display:block;width:100%;max-width:400px;margin:auto"></svg><p class="note" id="statisticsHeatmapNote"></p>';
  $('historyFilterNote').after(statsPanel);
- const settings=document.createElement('div');settings.className='settingsOverlay';settings.hidden=true;settings.innerHTML='<section class="settingsWindow" role="dialog" aria-modal="true" aria-labelledby="heatmapSettingsTitle" style="max-width:480px"><header><strong id="heatmapSettingsTitle">Heatmap settings</strong><button type="button" id="heatmapSettingsClose" aria-label="Close heatmap settings">×</button></header><div class="settingsContent"><p class="settingsHelp">These settings apply to all heatmaps.</p><label>Resolution: <output id="heatmapResolutionValue"></output><input id="heatmapResolution" aria-label="Heatmap resolution" type="range" min="25" max="100" step="5"></label><p class="settingsHelp">Higher resolution uses smaller cells.</p><label>Peakiness: <output id="heatmapPeakinessValue"></output><input id="heatmapPeakiness" aria-label="Heatmap peakiness" type="range" min="1" max="5" step="1"></label><p class="settingsHelp">Higher peakiness makes hotspots tighter.</p><p id="heatmapSettingsStatus" class="settingsHelp" role="status"></p><button type="button" class="settingsSave" id="heatmapSettingsDone">Done</button></div></section>';
+ const settings=document.createElement('div');settings.className='settingsOverlay';settings.hidden=true;settings.innerHTML='<section class="settingsWindow" role="dialog" aria-modal="true" aria-labelledby="heatmapSettingsTitle" style="max-width:480px"><header><strong id="heatmapSettingsTitle">Heatmap settings</strong><button type="button" id="heatmapSettingsClose" aria-label="Close heatmap settings">×</button></header><div class="settingsContent"><p class="settingsHelp">Resolution and peakiness apply to all heatmaps.</p><label>Resolution: <output id="heatmapResolutionValue"></output><input id="heatmapResolution" aria-label="Heatmap resolution" type="range" min="25" max="100" step="5"></label><p class="settingsHelp">Higher resolution uses smaller cells.</p><label>Peakiness: <output id="heatmapPeakinessValue"></output><input id="heatmapPeakiness" aria-label="Heatmap peakiness" type="range" min="1" max="5" step="1"></label><p class="settingsHelp">Higher peakiness makes hotspots tighter.</p><label>Current target lookback: <input id="heatmapLookbackNumber" aria-label="Current target lookback shots" type="number" min="1" max="100" step="1" required></label><input id="heatmapLookbackSlider" aria-label="Current target lookback slider" type="range" min="1" max="100" step="1"><label style="display:flex;align-items:center"><input id="heatmapLookbackAll" type="checkbox"> All shots</label><p class="settingsHelp">Current target overlay only. Counts recorded misses; excludes synthetic shots. Sighting and record shots are separate.</p><p id="heatmapSettingsStatus" class="settingsHelp" role="status"></p><button type="button" class="settingsSave" id="heatmapSettingsDone">Done</button></div></section>';
  document.body.append(settings);
  let settingsTrigger=null;
- const openSettings=e=>{settingsTrigger=e.currentTarget;$('heatmapResolution').value=heatmapResolution;$('heatmapPeakiness').value=heatmapPeakiness;$('heatmapResolutionValue').textContent=heatmapResolution+' × '+heatmapResolution;$('heatmapPeakinessValue').textContent=heatmapPeakiness;$('heatmapSettingsStatus').textContent=heatmapSettingsError;settings.hidden=false;$('heatmapSettingsClose').focus()};
+ const openSettings=e=>{settingsTrigger=e.currentTarget;$('heatmapResolution').value=heatmapResolution;$('heatmapPeakiness').value=heatmapPeakiness;$('heatmapResolutionValue').textContent=heatmapResolution+' × '+heatmapResolution;$('heatmapPeakinessValue').textContent=heatmapPeakiness;$('heatmapLookbackAll').checked=heatmapLookback===null;$('heatmapLookbackSlider').value=heatmapLookback??10;$('heatmapLookbackNumber').value=heatmapLookback??10;$('heatmapLookbackSlider').disabled=$('heatmapLookbackNumber').disabled=heatmapLookback===null;$('heatmapSettingsStatus').textContent=heatmapSettingsError;settings.hidden=false;$('heatmapSettingsClose').focus()};
  const settingsButton=()=>{const button=document.createElement('button');button.type='button';button.className='btn';button.textContent='Heatmap settings';button.onclick=openSettings;return button};
  document.querySelector('.targetHead .controls').append(settingsButton());document.querySelector('.historyTargetHeading').after(settingsButton());
  const widgetSettings=settingsButton();widgetSettings.textContent='Settings';widgetSettings.setAttribute('aria-label','Heatmap settings');widgetSettings.style.cssText='position:absolute;top:4px;right:4px;z-index:1;padding:3px 6px;font-size:11px';$('liveHeatmapFrame').append(widgetSettings);
@@ -2680,12 +2684,22 @@ function initHeatmaps(){
  const closeSettings=()=>{settings.hidden=true;settingsTrigger?.focus()};
  $('heatmapSettingsClose').onclick=closeSettings;$('heatmapSettingsDone').onclick=closeSettings;settings.onclick=e=>{if(e.target===settings)closeSettings()};document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!settings.hidden)closeSettings()});
  const updateSettings=()=>{heatmapResolution=Number($('heatmapResolution').value);heatmapPeakiness=Number($('heatmapPeakiness').value);$('heatmapResolutionValue').textContent=heatmapResolution+' × '+heatmapResolution;$('heatmapPeakinessValue').textContent=heatmapPeakiness;renderTarget();renderDashboardWidgets();if(historyReviewItem)renderSavedReview();if(statsPanel.open)renderStatistics()};
- const saveSettings=()=>{try{appStorage.setItem('ft-heatmap-settings-v1',JSON.stringify({resolution:heatmapResolution,peakiness:heatmapPeakiness}));heatmapSettingsError=''}catch(error){heatmapSettingsError='Could not save heatmap settings: '+error.message}$('heatmapSettingsStatus').textContent=heatmapSettingsError};
+ const saveSettings=()=>{try{appStorage.setItem('ft-heatmap-settings-v1',JSON.stringify({resolution:heatmapResolution,peakiness:heatmapPeakiness,lookback:heatmapLookback}));heatmapSettingsError=''}catch(error){heatmapSettingsError='Could not save heatmap settings: '+error.message}$('heatmapSettingsStatus').textContent=heatmapSettingsError};
  for(const id of ['heatmapResolution','heatmapPeakiness']){$(id).oninput=updateSettings;$(id).onchange=saveSettings}
+ const lookbackNumber=$('heatmapLookbackNumber'),lookbackSlider=$('heatmapLookbackSlider'),lookbackAll=$('heatmapLookbackAll');
+ lookbackSlider.oninput=()=>{lookbackNumber.value=lookbackSlider.value;heatmapLookback=Number(lookbackSlider.value);$('heatmapSettingsStatus').textContent=heatmapSettingsError;renderTarget()};
+ lookbackSlider.onchange=saveSettings;
+ lookbackNumber.oninput=()=>{if(!lookbackNumber.validity.valid||!lookbackNumber.value){$('heatmapSettingsStatus').textContent='Enter a whole number from 1 to 100.';return}heatmapLookback=Number(lookbackNumber.value);lookbackSlider.value=lookbackNumber.value;$('heatmapSettingsStatus').textContent=heatmapSettingsError;renderTarget()};
+ lookbackNumber.onchange=()=>{if(!lookbackNumber.validity.valid||!lookbackNumber.value){lookbackNumber.reportValidity();return}saveSettings()};
+ lookbackAll.onchange=()=>{if(!lookbackNumber.validity.valid||!lookbackNumber.value)lookbackNumber.value=lookbackSlider.value;lookbackSlider.disabled=lookbackNumber.disabled=lookbackAll.checked;heatmapLookback=lookbackAll.checked?null:Number(lookbackSlider.value);renderTarget();saveSettings()};
  const originalDrawTarget=drawTarget;
  drawTarget=function(svg,data,focus,level,discipline){
   originalDrawTarget(svg,data,focus,level,discipline);
-  if((svg.id==='targetSvg'&&$('liveHeatmapOverlay').checked)||(svg.id==='savedReviewTarget'&&$('historyHeatmapOverlay').checked))paintHeatmap(svg,data,discipline||$('discipline').value);
+  if(svg.id==='targetSvg'&&$('liveHeatmapOverlay').checked){
+   const sighting=isFiveLive()?runtime.five.isSighting:!!(runtime&&currentStage()?.kind==='sighting');
+   const sessionShots=sighting?sightingShots:scorecardFocusSeries!==null&&!isFiveLive()?shots.slice(0,(scorecardFocusSeries+1)*targetSeriesSize()):shots;
+   paintHeatmap(svg,reviewingHistory?data:liveHeatmapShots(sessionShots,heatmapLookback),discipline||$('discipline').value);
+  }else if(svg.id==='savedReviewTarget'&&$('historyHeatmapOverlay').checked)paintHeatmap(svg,data,discipline||$('discipline').value);
  };
  const originalWidgets=renderDashboardWidgets;
  renderDashboardWidgets=function(){
