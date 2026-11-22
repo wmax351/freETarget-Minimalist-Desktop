@@ -11,6 +11,7 @@ import android.os.Build;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.WindowInsetsController;
+import android.view.View;
 import android.view.WindowManager;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
@@ -23,17 +24,37 @@ import android.webkit.WebViewClient;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 
 public final class MainActivity extends Activity {
     private static final String HOST = "appassets.androidplatform.net";
     private static final String INDEX = "https://" + HOST + "/index.html";
-    private static final Map<String, String> ASSETS = Map.of(
-            "/index.html", "text/html", "/android.js", "application/javascript",
-            "/mobile.css", "text/css", "/android.css", "text/css");
+    private static final int REQUEST_SYNC_EXPORT = 501;
+    private static final int REQUEST_SYNC_IMPORT = 502;
+    private static final int MAX_SYNC_BYTES = 32 * 1024 * 1024;
+    private static final Map<String, String> ASSETS = createAssetMap();
+
+    private static Map<String, String> createAssetMap() {
+        Map<String, String> assets = new HashMap<>();
+        assets.put("/index.html", "text/html");
+        assets.put("/android.js", "application/javascript");
+        assets.put("/mobile.css", "text/css");
+        assets.put("/android.css", "text/css");
+        assets.put("/portable_sync_core.js", "application/javascript");
+        return Collections.unmodifiableMap(assets);
+    }
+
     private WebView view;
     private TargetConnection target;
+    private String pendingSyncExport;
+    private boolean syncPickerOpen;
     private final BroadcastReceiver usbPermission = new BroadcastReceiver() {
         @Override public void onReceive(Context context, Intent intent) {
             if (TargetConnection.USB_PERMISSION.equals(intent.getAction())) {
@@ -81,6 +102,15 @@ public final class MainActivity extends Activity {
                 if ("https".equals(url.getScheme()) && HOST.equals(url.getHost()) && path != null
                         && ASSETS.containsKey(path)) {
                     try {
+                        if ("/index.html".equals(path)) {
+                            try (InputStream input = getAssets().open("index.html")) {
+                                String html = new String(readLimited(input, MAX_SYNC_BYTES), StandardCharsets.UTF_8);
+                                html = html.replace("</head>", "<script src=\"https://" + HOST
+                                        + "/portable_sync_core.js\"></script></head>");
+                                return new WebResourceResponse(ASSETS.get(path), "UTF-8",
+                                        new ByteArrayInputStream(html.getBytes(StandardCharsets.UTF_8)));
+                            }
+                        }
                         return new WebResourceResponse(ASSETS.get(path), "UTF-8",
                                 getAssets().open(path.substring(1)));
                     } catch (IOException ignored) {
@@ -88,7 +118,7 @@ public final class MainActivity extends Activity {
                     }
                 }
                 return new WebResourceResponse("text/plain", "UTF-8", 404, "Not Found",
-                        Map.of(), new ByteArrayInputStream(new byte[0]));
+                        Collections.emptyMap(), new ByteArrayInputStream(new byte[0]));
             }
         });
         view.addJavascriptInterface(new TargetApi(), "FTAndroidTarget");
@@ -111,7 +141,139 @@ public final class MainActivity extends Activity {
         super.onDestroy();
     }
 
+    @Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode != REQUEST_SYNC_EXPORT && requestCode != REQUEST_SYNC_IMPORT) return;
+        syncPickerOpen = false;
+        if (resultCode != RESULT_OK || data == null || data.getData() == null) {
+            if (requestCode == REQUEST_SYNC_EXPORT) reportSyncExport(false, "Sync export canceled.");
+            else reportSyncImport(null, "Sync import canceled.");
+            return;
+        }
+        Uri uri = data.getData();
+        if (requestCode == REQUEST_SYNC_EXPORT) {
+            String json = pendingSyncExport;
+            pendingSyncExport = null;
+            if (json == null) {
+                reportSyncExport(false, "The sync export expired. Try again.");
+                return;
+            }
+            try (OutputStream output = getContentResolver().openOutputStream(uri, "wt")) {
+                if (output == null) throw new IOException("Could not open the selected file.");
+                output.write(json.getBytes(StandardCharsets.UTF_8));
+                output.flush();
+                reportSyncExport(true, "Sync file saved.");
+            } catch (IOException error) {
+                reportSyncExport(false, "Could not save the sync file: " + error.getMessage());
+            }
+        } else {
+            try (InputStream input = getContentResolver().openInputStream(uri)) {
+                if (input == null) throw new IOException("Could not open the selected file.");
+                String json = new String(readLimited(input, MAX_SYNC_BYTES), StandardCharsets.UTF_8);
+                new JSONObject(json);
+                reportSyncImport(json, null);
+            } catch (IOException | JSONException error) {
+                reportSyncImport(null, "Could not read the sync file: " + error.getMessage());
+            }
+        }
+    }
+
+    private void exportSyncFile(String json) {
+        try {
+            if (json == null || json.getBytes(StandardCharsets.UTF_8).length > MAX_SYNC_BYTES) {
+                throw new IllegalArgumentException("The sync file exceeds 32 MB.");
+            }
+            JSONObject document = new JSONObject(json);
+            if (!"freetarget-portable-sync".equals(document.optString("format"))
+                    || document.optInt("schema", -1) != 1) {
+                throw new IllegalArgumentException("The sync data has an unsupported format.");
+            }
+        } catch (JSONException | IllegalArgumentException error) {
+            reportSyncExport(false, error.getMessage());
+            return;
+        }
+        runOnUiThread(() -> {
+            if (syncPickerOpen) {
+                reportSyncExport(false, "Another sync file operation is already open.");
+                return;
+            }
+            pendingSyncExport = json;
+            Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            intent.setType("application/json");
+            intent.putExtra(Intent.EXTRA_TITLE, "freETarget-sync.json");
+            try {
+                syncPickerOpen = true;
+                startActivityForResult(intent, REQUEST_SYNC_EXPORT);
+            } catch (RuntimeException error) {
+                syncPickerOpen = false;
+                pendingSyncExport = null;
+                reportSyncExport(false, "Could not open the save dialog: " + error.getMessage());
+            }
+        });
+    }
+
+    private void importSyncFile() {
+        runOnUiThread(() -> {
+            if (syncPickerOpen) {
+                reportSyncImport(null, "Another sync file operation is already open.");
+                return;
+            }
+            Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            intent.setType("application/json");
+            try {
+                syncPickerOpen = true;
+                startActivityForResult(intent, REQUEST_SYNC_IMPORT);
+            } catch (RuntimeException error) {
+                syncPickerOpen = false;
+                reportSyncImport(null, "Could not open the file picker: " + error.getMessage());
+            }
+        });
+    }
+
+    private static byte[] readLimited(InputStream input, int limit) throws IOException {
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        byte[] buffer = new byte[8192];
+        int total = 0, count;
+        while ((count = input.read(buffer)) != -1) {
+            total += count;
+            if (total > limit) throw new IOException("The sync file exceeds 32 MB.");
+            output.write(buffer, 0, count);
+        }
+        return output.toByteArray();
+    }
+
+    private void reportSyncExport(boolean success, String message) {
+        if (view == null) return;
+        String script = "window.FTPortableSync && window.FTPortableSync.exportResult("
+                + success + "," + JSONObject.quote(message) + ")";
+        view.post(() -> {
+            if (view != null) view.evaluateJavascript(script, null);
+        });
+    }
+
+    private void reportSyncImport(String json, String error) {
+        if (view == null) return;
+        String script = error != null
+                ? "window.FTPortableSync && window.FTPortableSync.importResult(null,"
+                        + JSONObject.quote(error) + ")"
+                : "window.FTPortableSync && window.FTPortableSync.importResult("
+                        + JSONObject.quote(json) + ",null)";
+        view.post(() -> {
+            if (view != null) view.evaluateJavascript(script, null);
+        });
+    }
+
     final class TargetApi {
+        @JavascriptInterface public void exportSyncFile(String json) {
+            MainActivity.this.exportSyncFile(json);
+        }
+
+        @JavascriptInterface public void importSyncFile() {
+            MainActivity.this.importSyncFile();
+        }
+
         @JavascriptInterface public void setNavigationAppearance(boolean dark, String sidebarColor) {
             int color = Color.WHITE;
             if (dark) {
@@ -121,11 +283,22 @@ public final class MainActivity extends Activity {
             final int background = color;
             runOnUiThread(() -> {
                 if (isDestroyed()) return;
-                getWindow().setNavigationBarColor(background);
-                WindowInsetsController controller = getWindow().getInsetsController();
-                if (controller != null) {
-                    int lightNav = WindowInsetsController.APPEARANCE_LIGHT_NAVIGATION_BARS;
-                    controller.setSystemBarsAppearance(dark ? 0 : lightNav, lightNav);
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O && !dark) {
+                    getWindow().setNavigationBarColor(Color.rgb(32, 42, 54));
+                } else {
+                    getWindow().setNavigationBarColor(background);
+                }
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                    WindowInsetsController controller = getWindow().getInsetsController();
+                    if (controller != null) {
+                        int lightNav = WindowInsetsController.APPEARANCE_LIGHT_NAVIGATION_BARS;
+                        controller.setSystemBarsAppearance(dark ? 0 : lightNav, lightNav);
+                    }
+                } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    View decor = getWindow().getDecorView();
+                    int flags = decor.getSystemUiVisibility();
+                    int lightNav = View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+                    decor.setSystemUiVisibility(dark ? flags & ~lightNav : flags | lightNav);
                 }
             });
         }

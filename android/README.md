@@ -15,9 +15,6 @@ For a test build, open this directory in Android Studio, choose Gradle JDK **17*
 
 Command-line checks: `./gradlew testDebugUnitTest lintDebug assembleDebug`. Release lint: `./gradlew lintVitalRelease`. Produce the signed release APK in Android Studio.
 
-Android remains device-local; this update does not add iCloud or cross-platform cloud sync.
-
-
 The Android app connects directly to the target via Wi-Fi/TCP or USB serial and stores profiles, guns, history and settings on the device.
 
 ## Download and install the Android app
@@ -31,8 +28,14 @@ To connect to a target, follow the [Wi-Fi setup guide for all platforms](../docs
 ## Build from source (developers only)
 
 1. Clone or download this repository and open its `android/` folder in Android Studio.
-2. The build declares JDK 17, Android SDK Platform 35, Android Gradle Plugin 8.7.3, and Android 11 or later (minSdk 30). The wrapper is set to Gradle 8.9. Select JDK 17 in Android Studio's Gradle settings; the old Java 25 daemon override is removed.
-3. Select a connected Android 11 or later phone or tablet and click **Run**. For a sideloadable debug APK, use **Build APK(s)** or run `./gradlew :app:assembleDebug` from the project directory with Gradle 8.9 installed. The file is written to `app/build/outputs/apk/debug/app-debug.apk`.
+2. The source build declares JDK 17, Android SDK Platform 35, Android Gradle Plugin 8.7.3, Gradle 9.7.1, and Android 7.1 or later (minSdk 25). Select JDK 17 in Android Studio's Gradle settings. The published signed APK linked above still requires Android 11 or later.
+3. Select a connected Android 7.1 or later phone or tablet and click **Run**. For a sideloadable debug APK, use **Build APK(s)** or run `gradlew.bat :app:assembleDebug` on Windows (`./gradlew :app:assembleDebug` on macOS/Linux) from the project directory. The wrapper downloads the required Gradle version, and the APK is written to `app/build/outputs/apk/debug/app-debug.apk`.
+
+## Sync with a Windows PC
+
+Sync uses manual JSON file exchange; it is not cloud sync. Finish or discard the current session and disconnect the target. In **Settings → Backup → Sync With Windows PC**, export a file, transfer it to the PC, and use **Import & Merge Sync File** in the Windows app. Export again on Windows and import that file on Android to carry merged changes back.
+
+Profiles and saved sessions are merged. Conflicting profile edits and portable settings ask before applying; records missing from an imported file are kept, so deletions are not propagated. Connection details remain local to each device. Sync files are unencrypted JSON, limited to 32 MB; keep transfer files private and delete them when no longer needed.
 
 ## Mobile layout
 
@@ -95,7 +98,7 @@ To return the target to its own Wi-Fi network (**Access Point Mode**), clear its
 - **Either mode:** Check target power and Wi-Fi startup, TCP port **1090**, and the app's **Settings → Connection → Enable Wi-Fi / USB Diagnostics** option. Try **Use last successful connection** if you previously connected successfully.
 - After connecting, log a session under a shooter and reopen **History** to confirm it was saved. Disconnect or power off the target to verify the app reports disconnection.
 
-**Testing note:** The Android APK has been tested in an emulator. Wi-Fi communication with a physical freETarget and behavior on a real Android phone/tablet have not yet been validated.
+**Testing note:** The source debug APK was installed and launched on a Lenovo TB-8504F running Android 7.1.1 (API 25), and its interface rendered. The published signed APK linked above was not rebuilt and still requires Android 11 or later. Wi-Fi communication with a physical freETarget, USB serial, audio and behavior on other devices have not yet been validated.
 
 ## USB serial
 
@@ -108,7 +111,7 @@ The build uses [usb-serial-for-android](https://github.com/mik3y/usb-serial-for-
 ## Beta scope
 
 - The app disconnects when it leaves the foreground. Reconnect when you return.
-- The preview focuses on receiving live scores over Wi-Fi and USB. Target settings editing, the Arduino terminal, custom logo uploads, and Files backup import/export are outside this preview.
+- The preview focuses on receiving live scores over Wi-Fi and USB. Target settings editing, the Arduino terminal, custom logo uploads, and full-app backup/restore are outside this preview.
 - Profiles and logged results stay on the installed device. Uninstalling or clearing app data removes them.
 - **Testing status:** The project maintainer previously tested 0.2.2-beta.1 in an Android emulator. The 0.2.3-beta.1 build has not been run in this validation environment. Testing on a physical Android phone or tablet is still pending; real-target Wi-Fi/TCP and USB serial connectivity, permissions, audio, and device-specific behavior should be checked on hardware. Keep Android System WebView up to date. The APK is published under [GitHub Releases](https://github.com/DaveStruve/freETarget-Minimalist-Desktop/releases/download/v0.3.11-beta.1/freETarget-Minimalist-Android-0.2.3-beta.1.apk) as **freETarget-Minimalist-Android-0.2.3-beta.1.apk**. The APK contains a v2 signature and its signing certificate matches the previous published version.
 

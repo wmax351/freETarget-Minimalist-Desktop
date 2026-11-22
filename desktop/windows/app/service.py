@@ -33,6 +33,11 @@ class DesktopHTTPServer(ThreadingHTTPServer):
         script = (self.controller.assets / 'desktop_bootstrap.js').read_text(encoding='utf-8')
         script = script.replace('/*__FT_DESKTOP_BOOT__*/', safe_script_json(boot), 1)
         html = (self.controller.assets / 'index.html').read_text(encoding='utf-8')
+        portable_sync = self.controller.assets / 'portable_sync_core.js'
+        if portable_sync.is_file():
+            marker = '<!--DESKTOP_BOOTSTRAP-->'
+            sync_script = '<script>' + portable_sync.read_text(encoding='utf-8') + '</script>'
+            html = html.replace(marker, sync_script + marker, 1)
         return html.replace('<!--DESKTOP_BOOTSTRAP-->', '<script>' + script + '</script>', 1).encode('utf-8')
 
 
@@ -109,6 +114,12 @@ class DesktopHandler(bridge.Handler):
             if path == '/desktop/store':
                 result = controller.store.change(obj.get('key'), obj.get('value'), remove=obj.get('remove') is True,
                                                  expected_revision=obj.get('expected_revision'))
+            elif path == '/desktop/export-sync':
+                result = controller.export_sync_file()
+            elif path == '/desktop/read-sync':
+                result = controller.read_sync_file()
+            elif path == '/desktop/apply-sync':
+                result = controller.apply_sync(obj)
             elif path == '/desktop/export-backup':
                 result = controller.export_backup()
             elif path == '/desktop/preview-backup':

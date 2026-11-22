@@ -45,7 +45,21 @@ final class TargetConnection {
     private String message = "Disconnected";
     private JSONObject successfulConfig;
 
-    private record Event(long id, JSONObject json, int size) {}
+    private static final class Event {
+        private final long id;
+        private final JSONObject json;
+        private final int size;
+
+        Event(long id, JSONObject json, int size) {
+            this.id = id;
+            this.json = json;
+            this.size = size;
+        }
+
+        long id() { return id; }
+        JSONObject json() { return json; }
+        int size() { return size; }
+    }
 
     TargetConnection(Context context) {
         this.context = context.getApplicationContext();

@@ -16,10 +16,11 @@ From this directory, with Python 3.10–3.13:
 
 ```
 python -m unittest discover -s tests -p "test_*.py" -v
+node tests/test_portable_sync_core.cjs
 python tests/run_ui.py
 ```
 
-The first command uses only Python's standard library and simulated USB/TCP devices. The second additionally needs Node 18+ and uses deterministic DOM/audio mocks with the real UI code and embedded WAVs. No npm packages are needed. Neither command proves native WebView2 rendering, real audio latency or hardware behavior.
+The Python command uses only Python's standard library and simulated USB/TCP devices. The sync-core check uses Node 18+ and no npm packages. The UI command also needs Node 18+ and uses deterministic DOM/audio mocks with the real UI code and embedded WAVs. Neither command proves native WebView2 rendering, real audio latency or hardware behavior.
 
 `tools/prepare_assets.py` records the changes applied to an unmodified v1.7.9 UI. It is a developer conversion tool, not a launch step; its baseline assertion prevents reapplying it to the prepared desktop asset. The actual launch asset is `app/assets/index.html`. `desktop_data.html` and `desktop_ui.js` are source fragments embedded into that file. `desktop_bootstrap.js` is injected dynamically by the local server.
 

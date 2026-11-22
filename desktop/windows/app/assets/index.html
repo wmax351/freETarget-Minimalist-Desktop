@@ -2383,10 +2383,47 @@ window.FTDesktopPrepareClose=()=>{if(reviewingHistory&&liveSnapshot){liveSnapsho
 function desktopCanReplace(){const s=window.FTDesktopSessionState();if(s.unsaved||s.active)throw Error('Finish and log or discard the current session before restoring data.');if(liveConnected||liveConnecting)throw Error('Disconnect the target before restoring data.')}
 function initDesktopData(){
  const status=$('desktopDataStatus');let busy=false,preview=null;
- const controls=['desktopBackup','desktopRestore','desktopOpenFolder','desktopBrowserExport','desktopConfirmRestore','desktopCancelRestore'];
+ const syncPanel=document.createElement('section');syncPanel.className='desktopDataControls';
+ const syncHeading=document.createElement('h3');syncHeading.textContent='Sync With Android';
+ const syncHelp=document.createElement('p');syncHelp.className='settingsHelp';syncHelp.textContent='Exchange a JSON sync file manually. Import merges saved sessions and portable settings; matching profile or setting changes require confirmation. Records missing from the file are kept. Connection details stay on this device. The file is not encrypted.';
+ const syncActions=document.createElement('div');syncActions.className='formActions';
+ const syncExport=document.createElement('button');syncExport.className='btn';syncExport.id='desktopSyncExport';syncExport.type='button';syncExport.textContent='Export Sync File';
+ const syncImport=document.createElement('button');syncImport.className='btn';syncImport.id='desktopSyncImport';syncImport.type='button';syncImport.textContent='Import & Merge Sync File';
+ const syncStatus=document.createElement('p');syncStatus.className='settingsHelp';syncStatus.id='desktopSyncStatus';syncStatus.setAttribute('role','status');
+ syncActions.append(syncExport,syncImport);syncPanel.append(syncHeading,syncHelp,syncActions,syncStatus);
+ const controlsHost=document.querySelector('.desktopDataControls');
+ if(controlsHost)controlsHost.insertBefore(syncPanel,controlsHost.querySelector('.formActions'));
+ const controls=['desktopBackup','desktopRestore','desktopOpenFolder','desktopBrowserExport','desktopConfirmRestore','desktopCancelRestore','desktopSyncExport','desktopSyncImport'];
  function setBusy(value){busy=value;for(const id of controls)$(id).disabled=value}
  async function run(action){if(busy)return;setBusy(true);try{await action()}catch(error){status.textContent=error.message}finally{setBusy(false)}}
+ async function syncRun(action){if(busy)return;setBusy(true);try{await action()}catch(error){syncStatus.textContent=error.message}finally{setBusy(false)}}
  async function info(){const response=await fetch('/desktop/info');const data=await response.json();if(!response.ok)throw Error(data.error||'Could not read desktop data information.');$('desktopDataFolder').textContent=data.data_folder;$('desktopDataSummary').textContent=data.summary.shooters+' Shooters · '+data.summary.guns+' Guns · '+data.summary.sessions+' Saved Sessions';if(data.backup_warning)status.textContent=data.backup_warning}
+ function syncIdle(){desktopCanReplace();if(!window.FTPortableSyncCore)throw Error('Sync support is unavailable. Restart the desktop app and try again.')}
+ syncExport.onclick=()=>syncRun(async()=>{
+  syncIdle();syncStatus.textContent='Choose where to save the sync file…';
+  const result=await window.FTDesktop.request('/desktop/export-sync');
+  syncStatus.textContent=result.cancelled?'Sync export canceled.':'Sync file saved: '+result.filename;
+ });
+ syncImport.onclick=()=>syncRun(async()=>{
+  syncIdle();syncStatus.textContent='Choose a sync file…';
+  const result=await window.FTDesktop.request('/desktop/read-sync');
+  if(result.cancelled){syncStatus.textContent='Sync import canceled.';return}
+  const storage=window.FTDesktopStorage,core=window.FTPortableSyncCore;
+  const incoming=result.document,summary=core.inspect(incoming,storage);
+  const conflicts=summary.profileConflicts.length+' profile and '+summary.settingConflicts.length+' setting';
+  const message='Sync file from '+incoming.source+' contains '+summary.profilesAdded+' new profiles, '+summary.sessionsAdded+' new sessions'+
+   (summary.sessionVersions?' and '+summary.sessionVersions+' conflicting session version(s) that will be preserved':'')+
+   '. It has '+conflicts+(summary.settingConflicts.length===1?'':'s')+' conflict(s). Continue to review conflicts?';
+  if(!confirm(message)){syncStatus.textContent='Sync canceled. Local data was not changed.';return}
+  const merged=core.merge(incoming,storage,{
+   resolveProfile:(local)=>confirm('Profile "'+local.name+'" differs from the sync file. Replace this device’s profile with the imported version? Cancel keeps the current profile.'),
+   resolveSettings:items=>confirm('These portable settings differ: '+items.map(item=>item.label).join(', ')+'. Use the sync-file values? Cancel keeps the current settings.')
+  });
+  if(!Object.keys(merged.updates).length){syncStatus.textContent='No new data was merged.';return}
+  await window.FTDesktop.request('/desktop/apply-sync',{expected_revision:result.expected_revision,updates:merged.updates});
+  syncStatus.textContent='Data merged. Export a new sync file and import it on Android to carry the merged data back.';
+  window.setTimeout(()=>window.location.reload(),500);
+ });
  $('desktopBackup').onclick=()=>run(async()=>{status.textContent='Choose A Backup Location…';const result=await window.FTDesktop.request('/desktop/export-backup');status.textContent=result.cancelled?'Backup Cancelled.':'Backup Saved: '+result.filename});
  $('desktopRestore').onclick=()=>run(async()=>{desktopCanReplace();status.textContent='Choose A Backup Or Browser Export…';preview=await window.FTDesktop.request('/desktop/preview-backup');if(preview.cancelled){preview=null;status.textContent='Restore Cancelled.';return}const s=preview.incoming,c=preview.current;$('desktopRestorePreview').textContent='File: '+preview.filename+'\nIncoming: '+s.shooters+' Shooters, '+s.guns+' Guns, '+s.sessions+' Sessions'+(s.has_logo?', Custom Logo':'')+'.\nThis Replaces: '+c.shooters+' Shooters And '+c.sessions+' Sessions In This Desktop App.\nA Backup Of The Current Data Will Be Saved First.';$('desktopRestoreConfirm').hidden=false;status.textContent='Review The Counts Before Replacing Desktop Data.'});
  $('desktopCancelRestore').onclick=()=>{if(busy)return;preview=null;$('desktopRestoreConfirm').hidden=true;status.textContent='Restore Cancelled. Desktop Data Is Unchanged.'};

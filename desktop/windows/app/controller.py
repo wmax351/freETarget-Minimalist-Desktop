@@ -2,12 +2,14 @@ from __future__ import annotations
 import pathlib
 import os
 import sys
+import json
 import secrets
 import threading
 import time
 import webbrowser
 from datetime import datetime
-from storage import MAX_BACKUP, read_backup, summary
+from storage import MAX_BACKUP, StorageConflict, atomic_write, read_backup, summary
+from portable_sync import MAX_SYNC_BYTES, document_from_storage, read_sync_file, validate_sync_updates
 from version import APP_VERSION, BASELINE_VERSION
 
 
@@ -28,19 +30,19 @@ class DesktopController:
                     database=str(self.store.path), revision=state['revision'], summary=summary(state['storage']),
                     backup_warning=self.backup_warning)
 
-    def _choose(self, save=False):
+    def _choose(self, save=False, *, file_kind='Backup'):
         if not self.window or not self.webview:
             raise ValueError('The desktop window is not ready.')
         if not self._dialog_lock.acquire(blocking=False):
             raise ValueError('Another file dialog is already open.')
         try:
+            filename = 'freETarget-' + file_kind.lower() + '-' + datetime.now().strftime('%Y-%m-%d-%H%M%S') + '.json'
             if save:
                 result = self.window.create_file_dialog(self.webview.FileDialog.SAVE,
-                    save_filename='freETarget-backup-' + datetime.now().strftime('%Y-%m-%d-%H%M%S') + '.json',
-                    file_types=('freETarget Backup (*.json)',))
+                    save_filename=filename, file_types=('freETarget ' + file_kind + ' (*.json)',))
             else:
                 result = self.window.create_file_dialog(self.webview.FileDialog.OPEN,
-                    allow_multiple=False, file_types=('freETarget Backup (*.json)',))
+                    allow_multiple=False, file_types=('freETarget ' + file_kind + ' (*.json)',))
             if not result:
                 return None
             return pathlib.Path(result[0] if isinstance(result, (list, tuple)) else result)
@@ -64,6 +66,11 @@ class DesktopController:
             state = self.window.evaluate_js('typeof window.FTDesktopSessionState === "function" ? window.FTDesktopSessionState() : null')
             if not isinstance(state, dict) or state.get('active') or state.get('unsaved'):
                 raise ValueError('Finish and log or discard the current session before restoring data.')
+
+    def _assert_disconnected(self):
+        with self.bridge.lock:
+            if self.bridge.state['connected'] or self.bridge.state['connecting']:
+                raise ValueError('Disconnect the target before syncing.')
 
     def open_data_folder(self):
         if sys.platform != 'win32':
@@ -106,6 +113,61 @@ class DesktopController:
                 result = self.store.restore(stage['storage'], expected_revision=stage['revision'], confirmed=obj.get('confirmed') is True)
             self._staged = None
             return result
+
+    def export_sync_file(self):
+        self._assert_idle()
+        self._assert_disconnected()
+        path = self._choose(save=True, file_kind='Sync')
+        if path is None:
+            return dict(cancelled=True)
+        if path.suffix.lower() != '.json':
+            path = path.with_name(path.name + '.json')
+        if path.resolve() in {self.store.path.resolve(),
+                pathlib.Path(str(self.store.path) + '-wal').resolve(),
+                pathlib.Path(str(self.store.path) + '-shm').resolve()}:
+            raise ValueError('Choose a separate sync file.')
+        state = self.store.snapshot()
+        document = document_from_storage(state['storage'], 'windows')
+        raw = json.dumps(document, ensure_ascii=False, indent=2, allow_nan=False).encode('utf-8')
+        if len(raw) > MAX_SYNC_BYTES:
+            raise ValueError('The sync file exceeds 32 MB.')
+        atomic_write(path, raw)
+        return dict(saved=True, filename=path.name, summary=summary(state['storage']))
+
+    def read_sync_file(self):
+        self._assert_idle()
+        self._assert_disconnected()
+        path = self._choose(file_kind='Sync')
+        if path is None:
+            return dict(cancelled=True)
+        if path.is_symlink() or not path.is_file():
+            raise ValueError('Choose a regular freETarget sync file.')
+        if path.stat().st_size > MAX_SYNC_BYTES:
+            raise ValueError('The sync file exceeds 32 MB.')
+        with path.open('rb') as stream:
+            document = read_sync_file(stream.read(MAX_SYNC_BYTES + 1))
+        self._assert_idle()
+        self._assert_disconnected()
+        state = self.store.snapshot()
+        return dict(document=document, filename=path.name, expected_revision=state['revision'],
+                    current=summary(state['storage']))
+
+    def apply_sync(self, obj):
+        self._assert_idle()
+        updates = validate_sync_updates(obj.get('updates'))
+        with self.bridge.lock:
+            if self.bridge.state['connected'] or self.bridge.state['connecting']:
+                raise ValueError('Disconnect the target before syncing.')
+            state = self.store.snapshot()
+            if type(obj.get('expected_revision')) is not int or obj['expected_revision'] != state['revision']:
+                raise StorageConflict('Local data changed during sync. Import the file again.')
+            merged = dict(state['storage'])
+            for key, value in updates.items():
+                if value is None:
+                    merged.pop(key, None)
+                else:
+                    merged[key] = value
+            return self.store.restore(merged, expected_revision=state['revision'], confirmed=True)
 
     def start_browser_exporter(self):
         if self.exporter is None:

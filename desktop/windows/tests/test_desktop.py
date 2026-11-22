@@ -99,6 +99,53 @@ class ControllerTests(unittest.TestCase):
         self.assertEqual(self.controller.export_backup()['filename'], 'my-backup.json')
         self.assertEqual(read_backup(target.with_suffix('.json').read_bytes())[0], {'ft-theme': 'dark'})
 
+    def test_sync_export_omits_connection_settings_and_import_merge_preserves_local_connection(self):
+        profiles = json.dumps([{'id': 'p-1', 'name': 'Alex', 'guns': []}])
+        history = json.dumps([{'id': 's-1', 'name': 'Alex'}])
+        self.store.change('ft-shooter-profiles-v1', profiles, expected_revision=0)
+        self.store.change('ft-session-history-v1', history, expected_revision=1)
+        self.store.change('ft-host', '192.168.10.9', expected_revision=2)
+        target = pathlib.Path(self.temp.name) / 'portable-sync'
+        self.window.create_file_dialog.return_value = str(target)
+        exported = self.controller.export_sync_file()
+        sync_path = target.with_suffix('.json')
+        self.assertEqual(exported['filename'], sync_path.name)
+        document = json.loads(sync_path.read_text(encoding='utf-8'))
+        self.assertEqual(document['data']['profiles'], json.loads(profiles))
+        self.assertNotIn('ft-host', document['data']['settings'])
+
+        imported_profiles = json.dumps([{'id': 'p-1', 'name': 'Alex', 'guns': []},
+                                        {'id': 'p-2', 'name': 'Morgan', 'guns': []}])
+        sync_path.write_text(json.dumps({
+            **document,
+            'data': {**document['data'], 'profiles': json.loads(imported_profiles),
+                     'settings': {**document['data']['settings'], 'ft-theme-mode': None}},
+        }), encoding='utf-8')
+        self.window.create_file_dialog.return_value = str(sync_path)
+        preview = self.controller.read_sync_file()
+        self.assertEqual(preview['expected_revision'], 3)
+        self.controller.apply_sync({
+            'expected_revision': preview['expected_revision'],
+            'updates': {'ft-shooter-profiles-v1': imported_profiles, 'ft-theme-mode': None},
+        })
+        state = self.store.snapshot()['storage']
+        self.assertEqual(json.loads(state['ft-shooter-profiles-v1'])[-1]['name'], 'Morgan')
+        self.assertEqual(state['ft-host'], '192.168.10.9')
+        self.assertNotIn('ft-theme-mode', state)
+
+    def test_sync_requires_idle_disconnected_state_and_revision(self):
+        self.window.evaluate_js.return_value = {'active': True, 'unsaved': False}
+        with self.assertRaisesRegex(ValueError, 'Finish and log'):
+            self.controller.export_sync_file()
+        self.window.evaluate_js.return_value = {'active': False, 'unsaved': False}
+        self.bridge.state['connected'] = True
+        with self.assertRaisesRegex(ValueError, 'Disconnect'):
+            self.controller.export_sync_file()
+        self.bridge.state['connected'] = False
+        self.store.change('ft-shooter-profiles-v1', '[]', expected_revision=0)
+        with self.assertRaises(StorageConflict):
+            self.controller.apply_sync({'expected_revision': 0, 'updates': {'ft-theme-mode': 'dark'}})
+
     def test_single_instance_lock_releases_cleanly(self):
         first = InstanceLock(self.temp.name).acquire()
         try:
@@ -204,6 +251,15 @@ class HTTPTests(unittest.TestCase):
         self.assertEqual(boot['storage']['ft-text'], value)
         self.assertEqual(headers['X-Frame-Options'], 'DENY')
         self.assertIn("connect-src 'self'", headers['Content-Security-Policy'])
+
+    def test_sync_core_and_controls_are_in_the_served_windows_ui(self):
+        status, raw, _ = self.request(self.server.app_path, token=False)
+        html = raw.decode('utf-8')
+        self.assertEqual(status, 200)
+        self.assertIn('window.FTPortableSyncCore', html)
+        self.assertIn('Sync With Android', html)
+        self.assertIn('/desktop/read-sync', html)
+        self.assertIn('/desktop/apply-sync', html)
 
     def test_invalid_body_cannot_mutate_data(self):
         for raw in ('[]', '{broken}', '{"key":"ft-theme","key":"ft-text"}', '{"value":NaN}'):
